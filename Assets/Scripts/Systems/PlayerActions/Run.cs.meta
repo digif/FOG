@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 11751599546f3c14186c8a7b8d5678c5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - runSpeed: {fileID: 11400000, guid: ebeaf2dcc1d3d174a86f18248a061414, type: 2}
+  - isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

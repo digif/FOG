@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 46e79f8910f9d9d41be5b537c1420a22
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_animator: {instanceID: 0}
+  - playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
+  - JumpEvent: {fileID: 11400000, guid: 51c11db4dc89b9841ba672da712060df, type: 2}
+  - isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
+  - isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
