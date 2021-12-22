@@ -216,6 +216,88 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 0a9b46d4e2f4399489c89e4c8b09acf2, type: 3}
   onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
   audioSource: {fileID: 7994347526125581991}
+--- !u!1 &7994347526317704731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7994347526317704740}
+  - component: {fileID: 7994347526317704743}
+  - component: {fileID: 7994347526317704742}
+  - component: {fileID: 7994347526317704741}
+  m_Layer: 0
+  m_Name: Slide
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7994347526317704740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526317704731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7994347526917939338}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &7994347526317704743
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526317704731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.2}
+  m_Size: {x: 1.6, y: 1.2}
+  m_Direction: 1
+--- !u!70 &7994347526317704742
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526317704731}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.5}
+  m_Size: {x: 1.2, y: 0.5}
+  m_Direction: 1
+--- !u!114 &7994347526317704741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526317704731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773c41fcd5e644a46a0ae0b9cda3195d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
+  isPaused: {fileID: 11400000, guid: 30d0c7059900e16489a23ea581706632, type: 2}
+  fitCollider: {fileID: 11400000, guid: 399f0c0b9e1eb9746880e93c42b0f98a, type: 2}
+  standingCollider: {fileID: 7994347526317704743}
+  slidingCollider: {fileID: 7994347526317704742}
 --- !u!1 &7994347526445767917
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +390,7 @@ MonoBehaviour:
   m_RefResolutionX: 320
   m_RefResolutionY: 180
   m_UpscaleRT: 0
-  m_PixelSnapping: 0
+  m_PixelSnapping: 1
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
@@ -324,8 +406,6 @@ GameObject:
   - component: {fileID: 7994347526497175215}
   - component: {fileID: 7994347526497175214}
   - component: {fileID: 7994347526497175208}
-  - component: {fileID: 6936604205904484535}
-  - component: {fileID: 633575628144152520}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Player
@@ -429,68 +509,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e79f8910f9d9d41be5b537c1420a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
+  onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
+  onAutumnPower: {fileID: 11400000, guid: c48637b0d094c0942b2c2c50c65b8ecf, type: 2}
   isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
   isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
-  playerSprite: {fileID: 7994347526497175215}
-  playerRigidbody: {fileID: 4096670387040409226}
---- !u!114 &6936604205904484535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994347526497175212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e7b551f34f7944b8a99084419a8ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsVoidEventSo: {fileID: 11400000, guid: e4be2f2d427f75b40b649aba1dd3f439, type: 2}
-  listeners:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7994347526497175208}
-        m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
-        m_MethodName: OnDeath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &633575628144152520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994347526497175212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e7b551f34f7944b8a99084419a8ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsVoidEventSo: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
-  listeners:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7994347526497175208}
-        m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
-        m_MethodName: OnAutumnPower
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  m_Animator: {fileID: 7994347526497175214}
 --- !u!1 &7994347526917939336
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,15 +526,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7994347526917939338}
-  - component: {fileID: 3591418821468190334}
-  - component: {fileID: 665677097667644206}
-  - component: {fileID: 4096670387040409226}
-  - component: {fileID: 2446998823301603155}
-  - component: {fileID: 1101761346379749589}
-  - component: {fileID: 4815434208830631348}
-  - component: {fileID: 3916791590187430659}
+  - component: {fileID: 7994347526917939349}
+  - component: {fileID: 7994347526917939346}
+  - component: {fileID: 7994347526917939339}
+  - component: {fileID: 7994347526917939337}
+  - component: {fileID: 7994347526917939350}
+  - component: {fileID: 7994347526917939351}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerOld
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -529,10 +554,12 @@ Transform:
   - {fileID: 7994347526497175213}
   - {fileID: 7994347527435982373}
   - {fileID: 7994347526125581989}
+  - {fileID: 7994347527369697526}
+  - {fileID: 7994347526317704740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &3591418821468190334
+--- !u!70 &7994347526917939349
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -545,26 +572,26 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10115719, y: -0.22158217}
-  m_Size: {x: 0.7023144, y: 1.4431643}
-  m_Direction: 0
---- !u!70 &665677097667644206
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994347526917939336}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.100706205, y: -0.72}
-  m_Size: {x: 1.2014376, y: 0.46160233}
+  m_Offset: {x: 0, y: -0.7}
+  m_Size: {x: 1.2, y: 0.3}
   m_Direction: 1
---- !u!50 &4096670387040409226
+--- !u!70 &7994347526917939346
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526917939336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.7}
+  m_Size: {x: 1.4, y: 0.5}
+  m_Direction: 1
+--- !u!50 &7994347526917939339
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -576,16 +603,16 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 8
   m_Material: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!114 &2446998823301603155
+  m_Constraints: 5
+--- !u!114 &7994347526917939337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -594,16 +621,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7994347526917939336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11751599546f3c14186c8a7b8d5678c5, type: 3}
+  m_Script: {fileID: 11500000, guid: a06eb90695f2fd243bfe879474bbd9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
-  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
+  spawnPosition: {fileID: 11400000, guid: 40bcc73aa06d23c41af237455bcbc5a3, type: 2}
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
+  isFalling: {fileID: 11400000, guid: 8dae8afd0943c7d47b03a643361b9a19, type: 2}
   isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  onLevelStarted: {fileID: 11400000, guid: bb7dac2cc2bc3bb41b4e911dc1962400, type: 2}
---- !u!114 &1101761346379749589
+  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  m_GroundDetectionCollider: {fileID: 7994347526917939346}
+  rb: {fileID: 7994347526917939339}
+--- !u!114 &7994347526917939350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -619,8 +648,7 @@ MonoBehaviour:
   topFallSpeed: {fileID: 11400000, guid: 253892e18be3dae41817a3406e491ac5, type: 2}
   OnJump: {fileID: 11400000, guid: 2536db0da0a831c43b89e170c9082c87, type: 2}
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isAboveGround: {fileID: 11400000, guid: 827610960eb91e74a8013a7ec53e96c0, type: 2}
---- !u!114 &4815434208830631348
+--- !u!114 &7994347526917939351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,28 +657,77 @@ MonoBehaviour:
   m_GameObject: {fileID: 7994347526917939336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954c24d301096de44ace63674a32565c, type: 3}
+  m_Script: {fileID: 11500000, guid: 11751599546f3c14186c8a7b8d5678c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
-  isAboveGround: {fileID: 11400000, guid: 827610960eb91e74a8013a7ec53e96c0, type: 2}
---- !u!114 &3916791590187430659
+  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
+  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  isGrounded: {fileID: 0}
+  onLevelStarted: {fileID: 11400000, guid: bb7dac2cc2bc3bb41b4e911dc1962400, type: 2}
+  isLevelLoaded: 0
+--- !u!1 &7994347527369697525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7994347527369697526}
+  - component: {fileID: 7994347527369697520}
+  - component: {fileID: 7994347527369697527}
+  m_Layer: 0
+  m_Name: Power
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7994347527369697526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347527369697525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7994347526917939338}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &7994347527369697520
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347527369697525}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.2}
+  m_Size: {x: 2.15, y: 1.75}
+  m_Direction: 1
+--- !u!114 &7994347527369697527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994347526917939336}
+  m_GameObject: {fileID: 7994347527369697525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773c41fcd5e644a46a0ae0b9cda3195d, type: 3}
+  m_Script: {fileID: 11500000, guid: 64854bf36518230488454d79799de688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onAutumnPower: {fileID: 11400000, guid: c48637b0d094c0942b2c2c50c65b8ecf, type: 2}
   isPaused: {fileID: 11400000, guid: 30d0c7059900e16489a23ea581706632, type: 2}
-  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
-  standingCollider: {fileID: 3591418821468190334}
-  slidingCollider: {fileID: 665677097667644206}
-  playerMaterial: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
+  m_collider: {fileID: 7994347527369697520}
 --- !u!1 &7994347527435982372
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,8 +786,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2446998823301603155}
-        m_TargetAssemblyTypeName: Run, Assembly-CSharp
+      - m_Target: {fileID: 7994347526917939351}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnMoveInput
         m_Mode: 0
         m_Arguments:
@@ -725,7 +802,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7994347527369697527}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnPowerInput
         m_Mode: 0
@@ -741,8 +818,8 @@ MonoBehaviour:
     m_ActionName: Player/Action[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1101761346379749589}
-        m_TargetAssemblyTypeName: Jump, Assembly-CSharp
+      - m_Target: {fileID: 7994347526917939350}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnJumpInput
         m_Mode: 0
         m_Arguments:
@@ -757,8 +834,8 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space,/Keyboard/upArrow,/Keyboard/w]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3916791590187430659}
-        m_TargetAssemblyTypeName: Slide, Assembly-CSharp
+      - m_Target: {fileID: 7994347526317704741}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnSlideInput
         m_Mode: 0
         m_Arguments:

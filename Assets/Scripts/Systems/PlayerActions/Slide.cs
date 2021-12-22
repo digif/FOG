@@ -4,61 +4,43 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class Slide : MonoBehaviour
 {
-    // states
-    [SerializeField]
-    BoolVariable isSliding = null;
-
-    [SerializeField]
-    BoolVariable isPaused = null;
-
-    [SerializeField]
-    CapsuleCollider2DVariable fitCollider = null;
+    #region Fields
     
+    [SerializeField] private BoolVariable isPaused = null;
+    [SerializeField] private BoolVariable isSliding = null;
+    [SerializeField] private CapsuleCollider2D standingCollider = null;
+    [SerializeField] private CapsuleCollider2D slidingCollider = null;
+    [SerializeField] private PhysicsMaterial2D playerMaterial;
 
-    // components
-    [SerializeField]
-    CapsuleCollider2D standingCollider = null;
+    #endregion
 
-    [SerializeField]
-    CapsuleCollider2D slidingCollider = null;
- 
-    private void OnEnable() {
-        fitCollider.Value = standingCollider;
-    }
-
-    private void OnDisable() {
-        fitCollider.Value = null;
-    }
-
+    #region Inputs
 
     public void OnSlideInput(InputAction.CallbackContext context)
     {
-        if (!isPaused.Value)
+        if (isPaused.Value) return;
+        
+        if (context.started)
         {
-            if (context.started)
-            {
-                OnStartSliding();
-            }
-            else if (context.canceled)
-            {
-                OnStopSliding();
-            }
+            DoSlide(true);
+        }
+        else if (context.canceled)
+        {
+            DoSlide(false);
         }
     }
 
-    public void OnStartSliding ()
+    #endregion
+
+    #region Private Methods
+
+    private void DoSlide (bool sliding)
     {
-        standingCollider.enabled = false;
-        slidingCollider.enabled = true;
-        isSliding.Value = true;
-        fitCollider.Value = slidingCollider;
+        playerMaterial.friction = sliding ? 0.1f : 0.5f;
+        standingCollider.enabled = !sliding;
+        slidingCollider.enabled = sliding;
+        isSliding.Value = sliding;
     }
 
-    public void OnStopSliding ()
-    {
-        standingCollider.enabled = true;
-        slidingCollider.enabled = false;
-        isSliding.Value = false;
-        fitCollider.Value = standingCollider;
-    }
+    #endregion
 }
