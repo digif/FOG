@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,6 +43,7 @@ public class Jump : MonoBehaviour
         {
             StopCoroutine(resetGroundedCoroutine);
         }
+        
         resetGroundedCoroutine = StartCoroutine(SetGrounded(isAboveGround.Value, 0.1f));
 
         groundCount++;
@@ -61,6 +61,7 @@ public class Jump : MonoBehaviour
         {
             StopCoroutine(resetGroundedCoroutine);
         }
+        
         resetGroundedCoroutine = StartCoroutine(SetGrounded(isAboveGround.Value, 0.1f));
     }
 
@@ -81,8 +82,14 @@ public class Jump : MonoBehaviour
     {
         // jump if on the ground and button pressed
         if (!isGrounded.Value || !context.started) return;
+        if (!isAboveGround.Value) return;
 
         rigidbody.velocity = new Vector2(0, jumpPower.Value);
+        if (resetGroundedCoroutine != null)
+        {
+            StopCoroutine(resetGroundedCoroutine);
+        }
+        
         isGrounded.Value = false;
         OnJump.Raise();
     }
@@ -97,12 +104,16 @@ public class Jump : MonoBehaviour
         {
             StopCoroutine(resetGroundedCoroutine);
         }
+        
         resetGroundedCoroutine = StartCoroutine(SetGrounded(isAboveGround.Value && groundCount > 0, 0.1f));
     }
     
     private IEnumerator SetGrounded(bool value, float time)
     {
         yield return new WaitForSeconds(time);
+
+        print(isAboveGround.Value);
+        print(value);
         isGrounded.Value = value;
     }
 
