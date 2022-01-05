@@ -13,10 +13,10 @@ public class DynamicCam : MonoBehaviour
 
     // parameters
     [SerializeField]
-    float maxOffset = 4;
+    float maxOffset = 5;
 
     [SerializeField]
-    float camSpeed = 10;
+    float camSpeed = 20;
 
     // Update is called once per frame
     void Update()
