@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: hitbox
       value: 
       objectReference: {fileID: 210676672}
+    - target: {fileID: 2940969993568297560, guid: 72377afd0db984f4ca2acb07e9f707ad, type: 3}
+      propertyPath: hurtbox
+      value: 
+      objectReference: {fileID: 210676672}
     - target: {fileID: 6986411830792586723, guid: 72377afd0db984f4ca2acb07e9f707ad, type: 3}
       propertyPath: m_Name
       value: baseEnemy
