@@ -45,6 +45,7 @@ public class Run : MonoBehaviour
 
         isFacingRight.Value = inputValue > 0;
         isMoving.Value = true;
+        
         rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f);
     }
 

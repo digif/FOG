@@ -112,8 +112,6 @@ public class Jump : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        print(isAboveGround.Value);
-        print(value);
         isGrounded.Value = value;
     }
 
