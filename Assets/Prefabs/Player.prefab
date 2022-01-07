@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 1101761346379749589}
   - component: {fileID: 4815434208830631348}
   - component: {fileID: 3916791590187430659}
+  - component: {fileID: 2282140862325525879}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -424,6 +425,7 @@ MonoBehaviour:
   isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
   isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
   onLevelStarted: {fileID: 11400000, guid: bb7dac2cc2bc3bb41b4e911dc1962400, type: 2}
+  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
 --- !u!114 &1101761346379749589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +474,24 @@ MonoBehaviour:
   standingCollider: {fileID: 3591418821468190334}
   slidingCollider: {fileID: 665677097667644206}
   playerMaterial: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
+--- !u!114 &2282140862325525879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526917939336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e702d190fce2464488a269f921ae46c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
+  isAgainstWall: {fileID: 11400000, guid: 1fd15ffa824fea74a8958cd8d5c996c2, type: 2}
+  jumpPower: {fileID: 11400000, guid: bf66ebeae02c0c148981cd1805a22ff6, type: 2}
+  isAboveGround: {fileID: 11400000, guid: 827610960eb91e74a8013a7ec53e96c0, type: 2}
+  isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
+  OnJump: {fileID: 11400000, guid: 2536db0da0a831c43b89e170c9082c87, type: 2}
 --- !u!1 &7994347527435982372
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +584,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1101761346379749589}
         m_TargetAssemblyTypeName: Jump, Assembly-CSharp
+        m_MethodName: OnJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2282140862325525879}
+        m_TargetAssemblyTypeName: WallJump, Assembly-CSharp
         m_MethodName: OnJumpInput
         m_Mode: 0
         m_Arguments:

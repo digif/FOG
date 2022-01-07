@@ -14,6 +14,7 @@ public class Jump : MonoBehaviour
     
     [SerializeField] private BoolVariable isGrounded = null;
     [SerializeField] private BoolVariable isAboveGround = null;
+    [SerializeField] private BoolVariable isAgainstWall = null;
     
     private Rigidbody2D rigidbody = null;
     private int groundCount;
@@ -70,7 +71,7 @@ public class Jump : MonoBehaviour
         // limit top fall speed
         var velocity = rigidbody.velocity;
         var verticalSpeed = 
-            (velocity.y > 0 ? 1: -1) * Mathf.Clamp(Mathf.Abs(velocity.y), 0, topFallSpeed.Value);
+            (velocity.y > 0 ? 1: -1) * Mathf.Clamp(Mathf.Abs(velocity.y), 0, topFallSpeed.Value * (isAgainstWall.Value ? 0.01f : 1f));
         rigidbody.velocity = new Vector2( rigidbody.velocity.x, verticalSpeed);
     }
 
