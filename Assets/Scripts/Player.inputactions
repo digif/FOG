@@ -1,5 +1,5 @@
 {
-    "name": "season loop",
+    "name": "Player",
     "maps": [
         {
             "name": "Player",
@@ -33,6 +33,22 @@
                     "name": "Slide",
                     "type": "Button",
                     "id": "66a61b4d-3fab-4771-abbc-7ca0459b07eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "WinterPower",
+                    "type": "Button",
+                    "id": "b47d6420-1486-42b2-bd30-529779f35341",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PowerAction",
+                    "type": "Value",
+                    "id": "89940dbe-d9fc-4b44-8527-764e77407939",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -206,17 +222,6 @@
                 },
                 {
                     "name": "",
-                    "id": "dc7d2dfc-4e9d-4987-8d95-fa0f51291b1b",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "750decfb-52dc-44d2-a88a-37afccbb0a9f",
                     "path": "<Joystick>/stick/up",
                     "interactions": "",
@@ -278,6 +283,50 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Slide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a06ac09-3a0d-45e8-b7d6-5273fcae94c1",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "WinterPower",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2d0c0dd-4136-4d22-ba21-c5fa35fb8776",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "WinterPower",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dce7d591-f8f8-4ecc-a584-2d323d85b4ef",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PowerAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8cfee93-1719-4630-ae36-093fc8f324c3",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PowerAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

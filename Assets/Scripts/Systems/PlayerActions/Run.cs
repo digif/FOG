@@ -13,6 +13,7 @@ public class Run : MonoBehaviour
     [SerializeField] private BoolVariable isMoving = null;
     [SerializeField] private BoolVariable isAgainstWall = null;
     [SerializeField] private BoolVariable isFacingRight = null;
+    [SerializeField] private BoolVariable canRun = null;
     [SerializeField] private GameEvent onLevelStarted = null;
     [SerializeField] private Vector2Variable playerSpeed = null;
     
@@ -38,6 +39,7 @@ public class Run : MonoBehaviour
     private void FixedUpdate()
     {
         //if (!isLevelLoaded) return;
+        if (!canRun.Value) return;
         if (isAgainstWall.Value) return;
         if (isDead.Value) return;
         if (Math.Abs(inputValue) <= 0.1f)
@@ -50,8 +52,7 @@ public class Run : MonoBehaviour
         isFacingRight.Value = inputValue > 0;
         isMoving.Value = true;
         
-        //TODO rework this to work with MovePosition or AddForce Why ?
-        rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : .5f));
+        rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : 1f));
         playerSpeed.Value = rigidbody.velocity + moveDirection.Value * -inputValue;
     }
 
