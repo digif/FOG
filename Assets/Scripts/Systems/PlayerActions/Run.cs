@@ -62,7 +62,7 @@ public class Run : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        inputValue = context.ReadValue<float>();
+        inputValue = context.ReadValue<Vector2>().x;
     }
 
     #endregion

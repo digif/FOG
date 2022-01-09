@@ -20,7 +20,7 @@ public class PowerManager : MonoBehaviour
 
     #region Properties
 
-    public float InputValue { get; private set; }
+    public Vector2 InputValue { get; private set; }
     
     public bool CanRun { set => canRun.Value = value; }
 
@@ -30,7 +30,7 @@ public class PowerManager : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        InputValue = context.ReadValue<float>();
+        InputValue = context.ReadValue<Vector2>();
     }
 
     public void OnPowerWinter(InputAction.CallbackContext context)

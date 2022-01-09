@@ -9,7 +9,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "1e10bac3-3f9f-41b1-b501-38cff2a843f0",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -58,7 +58,7 @@
                 {
                     "name": "",
                     "id": "978bfe49-cc26-4a3d-ab7b-7d7a29327403",
-                    "path": "<Gamepad>/leftStick/x",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -69,7 +69,7 @@
                 {
                     "name": "WASD",
                     "id": "00ca640b-d935-4593-8157-c05846ea39b3",
-                    "path": "1DAxis",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -78,7 +78,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Negative",
+                    "name": "left",
                     "id": "d2581a9b-1d11-4566-b27d-b92aff5fabbc",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -89,9 +89,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Negative",
+                    "name": "up",
                     "id": "255b2f0c-e9fb-4e89-a13a-2e98bccdef42",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -100,7 +100,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Positive",
+                    "name": "right",
                     "id": "2e46982e-44cc-431b-9f0b-c11910bf467a",
                     "path": "<Keyboard>/d",
                     "interactions": "",
@@ -111,9 +111,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Positive",
+                    "name": "down",
                     "id": "eac5efe2-d82c-4a37-b1a1-02f4bbecf5c5",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -124,7 +124,7 @@
                 {
                     "name": "",
                     "id": "3ea4d645-4504-4529-b061-ab81934c3752",
-                    "path": "<Joystick>/stick/x",
+                    "path": "<Joystick>/stick",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
@@ -189,44 +189,11 @@
                 },
                 {
                     "name": "",
-                    "id": "5224e948-8b06-4df4-966f-bed1dc8258f4",
-                    "path": "<Gamepad>/leftStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "1e1876c5-1f4a-4b10-bd89-778041adfa7c",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "81210057-a80f-4ba6-819d-f71637b9a1ca",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "750decfb-52dc-44d2-a88a-37afccbb0a9f",
-                    "path": "<Joystick>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false

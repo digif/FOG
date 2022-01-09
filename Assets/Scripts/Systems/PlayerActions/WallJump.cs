@@ -52,7 +52,8 @@ public class WallJump : MonoBehaviour
         if (!context.started) return;
 
         lastWallJump = Time.time;
-        myRigidbody.velocity = new Vector2((isFacingRight.Value ? -jumpPower.Value : jumpPower.Value) * .5f, jumpPower.Value * 0.8f);
+        //TODO change to add force
+        myRigidbody.AddForce(new Vector2((isFacingRight.Value ? -jumpPower.Value : jumpPower.Value) * .5f, jumpPower.Value * 0.8f), ForceMode2D.Impulse);
         isAgainstWall.Value = false;
         OnJump.Raise();
     }

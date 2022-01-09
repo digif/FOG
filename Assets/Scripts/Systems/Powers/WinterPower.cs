@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class WinterPower : IPower
 {
+    private const float UseTime = 5f;
+    
     private WinterPowerUi ui;
     private bool isUsingPower;
     private bool isUsingDash;
@@ -23,17 +26,31 @@ public class WinterPower : IPower
         powerManager.CanRun = false;
         ui.ui.SetActive(true);
         var emission = ui.particlesPower.emission;
-        Debug.Log(emission.enabled);
         emission.enabled = true;
+        
+        var rotationValue = ui.isFacingRight.Value ? -90 : 90;
+        ui.uiAim.transform.localRotation 
+            = Quaternion.AngleAxis(rotationValue, Vector3.forward);
+        ui.particlesPower.transform.parent.localRotation
+            = Quaternion.AngleAxis(rotationValue, Vector3.forward);
+        
+        powerManager.StartCoroutine(Stop(powerManager));
     }
 
-    public override void UseStop(PowerManager powerManager)
+    private IEnumerator Stop(PowerManager powerManager)
     {
+        yield return new WaitForSeconds(UseTime);
+        
         isUsingPower = false;
         powerManager.CanRun = true;
         ui.ui.SetActive(false);
         var emission = ui.particlesPower.emission;
         emission.enabled = false;
+    }
+    
+    public override void UseStop(PowerManager powerManager)
+    {
+        ;
     }
 
     public override void DashStart(PowerManager powerManager)
@@ -50,10 +67,14 @@ public class WinterPower : IPower
     {
         if (isUsingPower)
         {
+            if (powerManager.InputValue == Vector2.zero) return;
+            
+            var rotationValue = 90 - Vector2.Angle(powerManager.InputValue, Vector2.left);
+
             ui.uiAim.transform.localRotation 
-                *= Quaternion.AngleAxis(-powerManager.InputValue * Time.deltaTime * 100f, Vector3.forward);
+                = Quaternion.AngleAxis(rotationValue, Vector3.forward);
             ui.particlesPower.transform.parent.localRotation
-                *= Quaternion.AngleAxis(-powerManager.InputValue * Time.deltaTime * 100f, Vector3.forward);
+                = Quaternion.AngleAxis(rotationValue, Vector3.forward);
         }
         else if (isUsingDash)
         {
