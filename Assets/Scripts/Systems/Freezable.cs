@@ -6,8 +6,8 @@ public class Freezable : MonoBehaviour
     
     private void OnParticleCollision(GameObject other)
     {
-        if (other.gameObject.layer != 6) return; //Freeze layer
-
+        if (other.layer != 6) return; //Freeze layer
+        
         foreach (var behaviour in scriptsToFreeze)
         {
             behaviour.enabled = false;

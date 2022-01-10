@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,7 +14,6 @@ public class Jump : MonoBehaviour
     [SerializeField] private GameEvent OnJump = null;
     
     [SerializeField] private BoolVariable isGrounded = null;
-    [SerializeField] private BoolVariable isAboveGround = null;
     [SerializeField] private BoolVariable isAgainstWall = null;
     
     private Rigidbody2D rigidbody = null;
@@ -27,13 +27,6 @@ public class Jump : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-
-        isAboveGround.OnValueChange += AboveGround;
-    }
-
-    private void OnDestroy()
-    {
-        isAboveGround.OnValueChange -= AboveGround;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -45,7 +38,7 @@ public class Jump : MonoBehaviour
             StopCoroutine(resetGroundedCoroutine);
         }
         
-        resetGroundedCoroutine = StartCoroutine(SetGrounded(isAboveGround.Value, 0.1f));
+        resetGroundedCoroutine = StartCoroutine(SetGrounded(true, 0.1f));
 
         groundCount++;
         isGrounded.Value = true;
@@ -54,8 +47,9 @@ public class Jump : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.layer != 3) return; // Ground layer
-
+        
         groundCount--;
+
         if (groundCount > 0) return;
 
         if (resetGroundedCoroutine != null)
@@ -63,7 +57,7 @@ public class Jump : MonoBehaviour
             StopCoroutine(resetGroundedCoroutine);
         }
         
-        resetGroundedCoroutine = StartCoroutine(SetGrounded(isAboveGround.Value, 0.1f));
+        resetGroundedCoroutine = StartCoroutine(SetGrounded(false, 0.1f));
     }
 
     private void FixedUpdate()
@@ -83,7 +77,6 @@ public class Jump : MonoBehaviour
     {
         // jump if on the ground and button pressed
         if (!isGrounded.Value || !context.started) return;
-        if (!isAboveGround.Value) return;
 
         rigidbody.velocity = new Vector2(0, jumpPower.Value);
         if (resetGroundedCoroutine != null)
@@ -98,22 +91,12 @@ public class Jump : MonoBehaviour
     #endregion
 
     #region Private Methods
-
-    private void AboveGround()
-    {
-        if (resetGroundedCoroutine != null)
-        {
-            StopCoroutine(resetGroundedCoroutine);
-        }
-        
-        resetGroundedCoroutine = StartCoroutine(SetGrounded(isAboveGround.Value && groundCount > 0, 0.1f));
-    }
     
     private IEnumerator SetGrounded(bool value, float time)
     {
         yield return new WaitForSeconds(time);
 
-        isGrounded.Value = value;
+        isGrounded.Value = value && Physics2D.CircleCast(transform.position - transform.up * 0.8f, 0.4f, Vector2.down, 0f, 1 << 3).collider;
     }
 
     #endregion
