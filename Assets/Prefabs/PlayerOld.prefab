@@ -293,11 +293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773c41fcd5e644a46a0ae0b9cda3195d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
   isPaused: {fileID: 11400000, guid: 30d0c7059900e16489a23ea581706632, type: 2}
-  fitCollider: {fileID: 11400000, guid: 399f0c0b9e1eb9746880e93c42b0f98a, type: 2}
+  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
   standingCollider: {fileID: 7994347526317704743}
   slidingCollider: {fileID: 7994347526317704742}
+  playerMaterial: {fileID: 0}
 --- !u!1 &7994347526445767917
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,14 +509,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e79f8910f9d9d41be5b537c1420a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
-  onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
-  onAutumnPower: {fileID: 11400000, guid: c48637b0d094c0942b2c2c50c65b8ecf, type: 2}
   isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
   isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
-  m_Animator: {fileID: 7994347526497175214}
+  isMoving: {fileID: 0}
+  playerSprite: {fileID: 0}
+  playerRigidbody: {fileID: 0}
 --- !u!1 &7994347526917939336
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +646,7 @@ MonoBehaviour:
   topFallSpeed: {fileID: 11400000, guid: 253892e18be3dae41817a3406e491ac5, type: 2}
   OnJump: {fileID: 11400000, guid: 2536db0da0a831c43b89e170c9082c87, type: 2}
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
+  isAgainstWall: {fileID: 0}
 --- !u!114 &7994347526917939351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,11 +659,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11751599546f3c14186c8a7b8d5678c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
+  moveDirection: {fileID: 0}
   isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
   isGrounded: {fileID: 0}
+  isMoving: {fileID: 0}
+  isAgainstWall: {fileID: 0}
+  isFacingRight: {fileID: 0}
+  canRun: {fileID: 0}
   onLevelStarted: {fileID: 11400000, guid: bb7dac2cc2bc3bb41b4e911dc1962400, type: 2}
-  isLevelLoaded: 0
+  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
 --- !u!1 &7994347527369697525
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +851,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 66a61b4d-3fab-4771-abbc-7ca0459b07eb
     m_ActionName: Player/Slide[/Keyboard/s,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7994347526317704741}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: OnSlideInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b47d6420-1486-42b2-bd30-529779f35341
+    m_ActionName: Player/WinterPower[/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7994347526317704741}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: OnSlideInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 89940dbe-d9fc-4b44-8527-764e77407939
+    m_ActionName: Player/PowerAction[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7994347527369697527}
+        m_TargetAssemblyTypeName: Power, Assembly-CSharp
+        m_MethodName: OnPowerInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8c75f869-d749-4d1c-9d25-dc22938e0c16
+    m_ActionName: Player/Aim[/Keyboard/leftArrow,/Keyboard/upArrow,/Keyboard/rightArrow,/Keyboard/downArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

@@ -23,7 +23,6 @@ public class WinterPower : IPower
     public override void UseStart(PowerManager powerManager)
     {
         isUsingPower = true;
-        powerManager.CanRun = false;
         ui.ui.SetActive(true);
         var emission = ui.particlesPower.emission;
         emission.enabled = true;
@@ -42,7 +41,6 @@ public class WinterPower : IPower
         yield return new WaitForSeconds(UseTime);
         
         isUsingPower = false;
-        powerManager.CanRun = true;
         ui.ui.SetActive(false);
         var emission = ui.particlesPower.emission;
         emission.enabled = false;
@@ -69,7 +67,7 @@ public class WinterPower : IPower
         {
             if (powerManager.InputValue == Vector2.zero) return;
             
-            var rotationValue = 90 - Vector2.Angle(powerManager.InputValue, Vector2.left);
+            var rotationValue = -Vector2.SignedAngle(powerManager.InputValue, Vector2.up);
 
             ui.uiAim.transform.localRotation 
                 = Quaternion.AngleAxis(rotationValue, Vector3.forward);

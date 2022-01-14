@@ -510,8 +510,20 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.695862, y: 0.24098611}
-  - {x: 2.055393, y: 0.24098611}
+  - {x: -2.664733, y: -0.07433084}
+  - {x: -2.3496559, y: 0.0049588378}
+  - {x: -1.7861949, y: -0.0084756855}
+  - {x: -1.1294954, y: -0.099187195}
+  - {x: -0.86294866, y: -0.061912775}
+  - {x: -0.41278714, y: 0.36101365}
+  - {x: -0.088693805, y: 0.5208952}
+  - {x: 0.38188416, y: 0.5774845}
+  - {x: 0.7429794, y: 0.57111454}
+  - {x: 1.0356442, y: 0.52336067}
+  - {x: 1.3525642, y: 0.42262453}
+  - {x: 1.6789191, y: 0.2533262}
+  - {x: 1.8769224, y: 0.10685153}
+  - {x: 1.9998891, y: -0.00011543957}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -39074,6 +39086,14 @@ PrefabInstance:
       propertyPath: isFacingRight
       value: 
       objectReference: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
+    - target: {fileID: 6986369356547417376, guid: abf17922d84107d4982fed86704befd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986369356547417376, guid: abf17922d84107d4982fed86704befd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6986369356547417376, guid: abf17922d84107d4982fed86704befd1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0

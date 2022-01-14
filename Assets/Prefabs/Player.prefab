@@ -5526,7 +5526,6 @@ MonoBehaviour:
   topFallSpeed: {fileID: 11400000, guid: 253892e18be3dae41817a3406e491ac5, type: 2}
   OnJump: {fileID: 11400000, guid: 2536db0da0a831c43b89e170c9082c87, type: 2}
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isAboveGround: {fileID: 11400000, guid: 827610960eb91e74a8013a7ec53e96c0, type: 2}
   isAgainstWall: {fileID: 11400000, guid: 1fd15ffa824fea74a8958cd8d5c996c2, type: 2}
 --- !u!114 &4815434208830631348
 MonoBehaviour:
@@ -5647,18 +5646,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 975130639952547266}
-        m_TargetAssemblyTypeName: PowerManager, Assembly-CSharp
-        m_MethodName: OnMoveInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 1e10bac3-3f9f-41b1-b501-38cff2a843f0
     m_ActionName: Player/Move[/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -5753,6 +5740,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 89940dbe-d9fc-4b44-8527-764e77407939
     m_ActionName: Player/PowerAction[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 975130639952547266}
+        m_TargetAssemblyTypeName: PowerManager, Assembly-CSharp
+        m_MethodName: OnMoveInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8c75f869-d749-4d1c-9d25-dc22938e0c16
+    m_ActionName: Player/Aim[/Keyboard/leftArrow,/Keyboard/upArrow,/Keyboard/rightArrow,/Keyboard/downArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
