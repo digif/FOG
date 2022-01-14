@@ -5079,8 +5079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1219b958c5b5142b8e66640e4fda87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerTransform: {fileID: 7994347526917939338}
   winterPowerUi: {fileID: 6932166381407858231}
   canRun: {fileID: 11400000, guid: e86e3c02c54d6784a8a50a78e33a05be, type: 2}
+  moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
 --- !u!1 &7994347526125581988
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,6 +5758,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8c75f869-d749-4d1c-9d25-dc22938e0c16
     m_ActionName: Player/Aim[/Keyboard/leftArrow,/Keyboard/upArrow,/Keyboard/rightArrow,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 975130639952547266}
+        m_TargetAssemblyTypeName: PowerManager, Assembly-CSharp
+        m_MethodName: OnDashAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3e4d6855-a6f8-4dc0-bf44-3bb9615b55c5
+    m_ActionName: Player/Dash[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

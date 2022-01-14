@@ -1,11 +1,13 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Vector2 = UnityEngine.Vector2;
 
 public class PowerManager : MonoBehaviour
 {
     #region Fields
 
+    public Transform PlayerTransform;
+    
     public WinterPowerUi winterPowerUi;
     
     private readonly FallPower fallPower = new FallPower();
@@ -13,6 +15,7 @@ public class PowerManager : MonoBehaviour
     //TODO add other powers
 
     [SerializeField] private BoolVariable canRun = null;
+    [SerializeField] private Vector2Variable moveDirection = null;
 
     private IPower currentPower;
 
@@ -20,6 +23,7 @@ public class PowerManager : MonoBehaviour
 
     #region Properties
 
+    public Vector2 MoveDirection => moveDirection.Value;
     public Vector2 InputValue { get; private set; }
     
     public bool CanRun { set => canRun.Value = value; }
