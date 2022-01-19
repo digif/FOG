@@ -38,6 +38,7 @@ public class Run : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        playerSpeed.Value = rigidbody.velocity + moveDirection.Value * -inputValue;
         //if (!isLevelLoaded) return;
         if (!canRun.Value) return;
         if (isAgainstWall.Value) return;
@@ -53,7 +54,7 @@ public class Run : MonoBehaviour
         isMoving.Value = true;
         
         rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : 1f));
-        playerSpeed.Value = rigidbody.velocity + moveDirection.Value * -inputValue;
+        
     }
 
     #endregion
