@@ -25,16 +25,33 @@ public class DynamicCam : MonoBehaviour
     [SerializeField]
     Vector3 offset;
 
+    [SerializeField]
+    Vector3 transPosition;
+
+    [SerializeField]
+    Vector3 moveToPosition;
+
+
     // Update is called once per frame
     void Update()
     {
+        transPosition = this.transform.localPosition;
+
+        float xSpeed = playerSpeed.Value.x;
+        if (xSpeed > 1)
+            xSpeed = 1;
+        if (xSpeed < -1)
+            xSpeed = -1;
+
         offset = new Vector3
         {
-            x = playerSpeed.Value.x * maxXOffset,
-            y = playerSpeed.Value.normalized.y * maxYOffset,
-            z = this.transform.position.z
+            x = xSpeed * maxXOffset,
+            y = transPosition.y,
+            z = transPosition.z
         };
-        this.transform.position = Vector3.MoveTowards(this.transform.position, offset, camSpeed * Time.deltaTime);
+
+        moveToPosition = Vector3.MoveTowards(transPosition, offset, camSpeed * Time.deltaTime);
+        this.transform.localPosition = moveToPosition;
 
     }
 

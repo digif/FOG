@@ -5972,6 +5972,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
-  playerPosition: {fileID: 7994347526917939338}
-  maxOffset: 5
+  playerTransform: {fileID: 7994347526917939338}
+  maxXOffset: 5
+  maxYOffset: 5
   camSpeed: 20
+  offset: {x: 0, y: 0, z: 0}
+  transPosition: {x: 0, y: 0, z: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
