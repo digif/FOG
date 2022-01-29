@@ -7,21 +7,56 @@ public class DynamicCam : MonoBehaviour
     Vector2Variable playerSpeed = null;
 
     [SerializeField]
-    Transform playerPosition = null;
+    Transform playerTransform = null;
+
+
 
     // parameters
     [SerializeField]
-    float maxOffset = 5;
+    float maxXOffset = 5;
+
+    [SerializeField]
+    float maxYOffset = 5;
 
     [SerializeField]
     float camSpeed = 20;
 
+    // test
+    [SerializeField]
+    Vector3 offset;
+
+    [SerializeField]
+    Vector3 transPosition;
+
+    [SerializeField]
+    Vector3 moveToPosition;
+
+
     // Update is called once per frame
     void Update()
     {
-        Vector3 offset = (Vector3) playerSpeed.Value.normalized * maxOffset + playerPosition.position;
-        offset.z = -10;
+        transPosition = this.transform.localPosition;
 
-        transform.position = Vector3.MoveTowards(transform.position, offset, camSpeed * Time.deltaTime);
+        float xSpeed = playerSpeed.Value.x;
+        if (xSpeed > 1)
+            xSpeed = 1;
+        if (xSpeed < -1)
+            xSpeed = -1;
+
+        offset = new Vector3
+        {
+            x = xSpeed * maxXOffset,
+            y = transPosition.y,
+            z = transPosition.z
+        };
+
+        moveToPosition = Vector3.MoveTowards(transPosition, offset, camSpeed * Time.deltaTime);
+        this.transform.localPosition = moveToPosition;
+
+    }
+
+    void LateUpdate()
+    {
+        this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, playerTransform.rotation.z * -1.0f);
     }
 }
