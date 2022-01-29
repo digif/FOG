@@ -7,6 +7,7 @@ public class PowerManager : MonoBehaviour
     #region Fields
 
     public Transform PlayerTransform;
+    public BoolVariable IsFacingRight;
     
     public WinterPowerUi winterPowerUi;
     
@@ -66,6 +67,14 @@ public class PowerManager : MonoBehaviour
             currentPower?.DashStart(this);
         }
         else if (context.canceled)
+        {
+            currentPower?.DashStop(this);
+        }
+    }
+
+    public void OnJumpAction(InputAction.CallbackContext context)
+    {
+        if (context.started)
         {
             currentPower?.DashStop(this);
         }

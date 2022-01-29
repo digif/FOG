@@ -17,6 +17,7 @@ public class Jump : MonoBehaviour
     [SerializeField] private BoolVariable isAgainstWall = null;
     
     private Rigidbody2D rigidbody = null;
+    private Transform myTransform;
     private int groundCount;
     private Coroutine resetGroundedCoroutine;
 
@@ -26,6 +27,7 @@ public class Jump : MonoBehaviour
 
     private void Awake()
     {
+        myTransform = transform;
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -78,7 +80,7 @@ public class Jump : MonoBehaviour
         // jump if on the ground and button pressed
         if (!isGrounded.Value || !context.started) return;
 
-        rigidbody.velocity = new Vector2(0, jumpPower.Value);
+        rigidbody.velocity = myTransform.up * jumpPower.Value;
         if (resetGroundedCoroutine != null)
         {
             StopCoroutine(resetGroundedCoroutine);
@@ -96,7 +98,7 @@ public class Jump : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        isGrounded.Value = value && Physics2D.CircleCast(transform.position - transform.up * 0.8f, 0.4f, Vector2.down, 0f, 1 << 3).collider;
+        isGrounded.Value = value && Physics2D.CircleCast(myTransform.position - myTransform.up * 0.8f, 0.4f, Vector2.down, 0f, 1 << 3).collider;
     }
 
     #endregion

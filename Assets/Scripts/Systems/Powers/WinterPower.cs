@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
+using DG.Tweening;
 using UnityEngine;
 
 public class WinterPower : IPower
@@ -10,9 +10,14 @@ public class WinterPower : IPower
     private WinterPowerUi ui;
     private bool isUsingPower;
     private bool isUsingDash;
+    private Rigidbody2D playerRigidbody2D;
+
+    private Tween rotationTween;
+    private Coroutine stopCoroutine;
     
     public override void OnStart(PowerManager powerManager)
     {
+        playerRigidbody2D = powerManager.PlayerTransform.GetComponent<Rigidbody2D>();
         ui = powerManager.winterPowerUi;
     }
 
@@ -50,7 +55,6 @@ public class WinterPower : IPower
     
     public override void UseStop(PowerManager powerManager)
     {
-        ;
     }
 
     public override void DashStart(PowerManager powerManager)
@@ -59,26 +63,26 @@ public class WinterPower : IPower
         // var emission = ui.particlesPower.emission;
         // emission.enabled = true;
         
-        powerManager.StartCoroutine(StopDash());
+        stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
     }
 
-    private IEnumerator StopDash()
+    private IEnumerator StopDash(PowerManager powerManager)
     {
         yield return new WaitForSeconds(DashUseTime);
         
-        isUsingDash = false;
-        ui.ui.SetActive(false);
-        var emission = ui.particlesPower.emission;
-        emission.enabled = false;
+        DashStop(powerManager);
     }
     
     public override void DashStop(PowerManager powerManager)
     {
+        if (!(stopCoroutine is null)) powerManager.StopCoroutine(stopCoroutine);
+
         isUsingDash = false;
         ui.ui.SetActive(false);
         var emission = ui.particlesPower.emission;
         emission.enabled = false;
-        powerManager.PlayerTransform.right = Vector3.right;
+        rotationTween?.Kill();
+        rotationTween = DOTween.To(() => powerManager.PlayerTransform.right, x => powerManager.PlayerTransform.right = x, Vector3.right, 0.1f);
     }
 
     public override void OnUpdate(PowerManager powerManager)
@@ -96,40 +100,40 @@ public class WinterPower : IPower
         }
         else if (isUsingDash)
         {
-            var moveDirection = -powerManager.MoveDirection;
+            Vector2 moveDirection;
             var playerTransform = powerManager.PlayerTransform;
             var position = playerTransform.position;
 
-            playerTransform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            playerRigidbody2D.velocity = Vector2.zero;
 
             const int layer = 1 << 3;
-            var right = playerTransform.right;
-            var hit = Physics2D.Raycast(position + right * 0.3f, -playerTransform.up, 1.5f, layer);
-            
-            Debug.DrawRay(position + right * 0.3f, -playerTransform.up * 1.5f, Color.blue);
+            var playerRight = playerTransform.right;
+            var playerUp = playerTransform.up;
+            var hit = Physics2D.Raycast(position + playerRight * 0.3f, -playerUp, 1.5f, layer);
             
             if (hit.collider != null)
             {
-                Debug.DrawRay(hit.point, hit.normal, Color.magenta);
                 moveDirection = -Vector2.Perpendicular(hit.normal).normalized;
-                Debug.DrawRay(hit.point, moveDirection, Color.magenta);
             }
             else
             {
-                //TODO stop
+                DashStop(powerManager);
+                return;
             }
             
-            right = moveDirection;
-            playerTransform.right = right;
+            playerRight = moveDirection;
+            
+            rotationTween?.Kill();
+            rotationTween = DOTween.To(() => playerTransform.right, x => playerTransform.right = x, playerRight, 0.1f);
 
-            // playerTransform.localRotation = Quaternion.AngleAxis(rotationValue, Vector3.forward);
-            position += new Vector3(moveDirection.x, moveDirection.y, 0) * Time.deltaTime * 10f;
+            position += new Vector3(moveDirection.x, moveDirection.y, 0) * (Time.deltaTime * 10f * (powerManager.IsFacingRight.Value ? 1f : -1f));
             playerTransform.position = position;
         }
     }
 
     public override void OnPowerChanged(PowerManager powerManager)
     {
-        throw new System.NotImplementedException();
+        //TODO activate aura of the power
+        //TODO anim start
     }
 }

@@ -5080,6 +5080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTransform: {fileID: 7994347526917939338}
+  IsFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
   winterPowerUi: {fileID: 6932166381407858231}
   canRun: {fileID: 11400000, guid: e86e3c02c54d6784a8a50a78e33a05be, type: 2}
   moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
@@ -5683,6 +5684,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2282140862325525879}
         m_TargetAssemblyTypeName: WallJump, Assembly-CSharp
         m_MethodName: OnJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 975130639952547266}
+        m_TargetAssemblyTypeName: PowerManager, Assembly-CSharp
+        m_MethodName: OnJumpAction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
