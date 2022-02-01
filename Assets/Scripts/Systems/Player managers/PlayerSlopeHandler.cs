@@ -16,12 +16,10 @@ public class PlayerSlopeHandler : MonoBehaviour
     private void Awake()
     {
         myTransform = transform;
-        myTransform.right = Vector3.left;
     }
 
     private void FixedUpdate()
     {
-        print(myTransform.right);
         const int layer = 1 << 3;
         var hit = Physics2D.Raycast(myTransform.position, Vector2.down, 1.5f, layer);
         
