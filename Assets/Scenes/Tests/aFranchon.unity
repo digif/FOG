@@ -155,13 +155,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ae42526c4985c4496bc9c399424d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
   playerTransform: {fileID: 0}
   maxXOffset: 5
   maxYOffset: 5
   camSpeed: 20
+  globalPosition: {x: 0, y: 0, z: 0}
+  inputValueX: 0
+  localPosition: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
-  transPosition: {x: 0, y: 0, z: 0}
   moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!81 &151872035
 AudioListener:
