@@ -1,17 +1,18 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DynamicCam : MonoBehaviour
 {
-    // variables
-    [SerializeField]
-    Vector2Variable playerSpeed = null;
+    #region Fields
+
+    [Header("variables")]
 
     [SerializeField]
     Transform playerTransform = null;
 
 
-
-    // parameters
+    [Header("parameters")]
+    
     [SerializeField]
     float maxXOffset = 5;
 
@@ -21,36 +22,57 @@ public class DynamicCam : MonoBehaviour
     [SerializeField]
     float camSpeed = 20;
 
-    // test
+
+    [Header("debug - y offset")]
+
+    [SerializeField]
+    Vector3 globalPosition;
+
+    [Header("debug - x offset")]
+
+    [SerializeField]
+    float inputValueX;
+
+    [SerializeField]
+    Vector3 localPosition;
+
     [SerializeField]
     Vector3 offset;
 
     [SerializeField]
-    Vector3 transPosition;
-
-    [SerializeField]
     Vector3 moveToPosition;
 
+    #endregion
+
+
+    #region Unity Event Methods
+
+    private void Start()
+    {
+        globalPosition = this.transform.position;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        transPosition = this.transform.localPosition;
+        // y offest
+        globalPosition.x = this.transform.position.x;
 
-        float xSpeed = playerSpeed.Value.x;
-        if (xSpeed > 1)
-            xSpeed = 1;
-        if (xSpeed < -1)
-            xSpeed = -1;
+        if (globalPosition.y - playerTransform.position.y > maxYOffset)
+            globalPosition.y = playerTransform.position.y + maxYOffset;
 
-        offset = new Vector3
-        {
-            x = xSpeed * maxXOffset,
-            y = transPosition.y,
-            z = transPosition.z
-        };
+        if (globalPosition.y - playerTransform.position.y < -maxYOffset)
+            globalPosition.y = playerTransform.position.y - maxYOffset;
 
-        moveToPosition = Vector3.MoveTowards(transPosition, offset, camSpeed * Time.deltaTime);
+        this.transform.position = globalPosition;
+
+        // x offset
+        localPosition = this.transform.localPosition;
+
+        offset = localPosition;
+        offset.x = inputValueX * maxXOffset;
+
+        moveToPosition = Vector3.MoveTowards(localPosition, offset, camSpeed * Time.deltaTime);
         this.transform.localPosition = moveToPosition;
 
     }
@@ -59,4 +81,16 @@ public class DynamicCam : MonoBehaviour
     {
         this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, playerTransform.rotation.z * -1.0f);
     }
+    
+    #endregion
+
+
+    #region Inputs
+
+    public void OnMoveInput(InputAction.CallbackContext context)
+    {
+        inputValueX = context.ReadValue<Vector2>().x;
+    }
+
+    #endregion
 }

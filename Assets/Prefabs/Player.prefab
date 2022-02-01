@@ -5732,6 +5732,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6461406523494437715}
+        m_TargetAssemblyTypeName: DynamicCam, Assembly-CSharp
+        m_MethodName: OnMoveInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1e10bac3-3f9f-41b1-b501-38cff2a843f0
     m_ActionName: Player/Move[/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -5986,8 +5998,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
   playerTransform: {fileID: 7994347526917939338}
-  maxXOffset: 5
-  maxYOffset: 5
+  maxXOffset: 1
+  maxYOffset: 3
   camSpeed: 20
   offset: {x: 0, y: 0, z: 0}
   transPosition: {x: 0, y: 0, z: 0}
