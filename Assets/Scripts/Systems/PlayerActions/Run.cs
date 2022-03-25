@@ -20,7 +20,7 @@ public class Run : MonoBehaviour
     
     private bool isLevelLoaded = false;
     private float inputValue;
-    private Rigidbody2D rigidbody = null;
+    private Rigidbody2D _rigidbody = null;
 
     #endregion
     
@@ -29,7 +29,7 @@ public class Run : MonoBehaviour
     private void Awake()
     {
         onLevelStarted.Add(OnLevelStarted);
-        rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void OnDisable()
@@ -38,7 +38,7 @@ public class Run : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        playerSpeed.Value = rigidbody.velocity + moveDirection.Value * -inputValue;
+        playerSpeed.Value = _rigidbody.velocity + moveDirection.Value * -inputValue;
         //if (!isLevelLoaded) return;
         if (!canRun.Value) return;
         if (isAgainstWall.Value) return;
@@ -53,7 +53,7 @@ public class Run : MonoBehaviour
         isFacingRight.Value = inputValue > 0;
         isMoving.Value = true;
         
-        rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : 1f));
+        _rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : 1f));
         
     }
 
