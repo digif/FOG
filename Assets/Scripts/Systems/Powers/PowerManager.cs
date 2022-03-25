@@ -12,6 +12,7 @@ public class PowerManager : MonoBehaviour
     public BoolVariable IsFacingRight;
     
     public WinterPowerUi winterPowerUi;
+    public FallPowerUi fallPowerUi;
     
     private readonly FallPower fallPower = new FallPower();
     private readonly WinterPower winterPower = new WinterPower();

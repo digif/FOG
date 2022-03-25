@@ -16,12 +16,13 @@ public class FallPower : IPower
     
     public override void OnStart(PowerManager powerManager)
     {
-        
+        ui = powerManager.fallPowerUi;
     }
 
     public override void OnPowerSelect(PowerManager powerManager)
     {
-        //TODO show aura
+        var emission = ui.particlesAura.emission;
+        emission.enabled = true;
     }
 
     public override void UseStart(PowerManager powerManager)
@@ -77,6 +78,7 @@ public class FallPower : IPower
 
     public override void OnPowerChanged(PowerManager powerManager)
     {
-        //TODO stop aura
+        var emission = ui.particlesAura.emission;
+        emission.enabled = false;
     }
 }

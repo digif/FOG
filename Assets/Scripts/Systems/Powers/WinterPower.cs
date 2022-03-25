@@ -23,8 +23,8 @@ public class WinterPower : IPower
 
     public override void OnPowerSelect(PowerManager powerManager)
     {
-        //TODO activate aura of the power
-        //TODO anim start
+        var emission = ui.particlesAura.emission;
+        emission.enabled = true;
     }
 
     public override void UseStart(PowerManager powerManager)
@@ -34,7 +34,7 @@ public class WinterPower : IPower
         var emission = ui.particlesPower.emission;
         emission.enabled = true;
         
-        var rotationValue = ui.isFacingRight.Value ? -90 : 90;
+        var rotationValue = powerManager.IsFacingRight.Value ? -90 : 90;
         ui.uiAim.transform.localRotation 
             = Quaternion.AngleAxis(rotationValue, Vector3.forward);
         ui.particlesPower.transform.parent.localRotation
@@ -134,7 +134,8 @@ public class WinterPower : IPower
 
     public override void OnPowerChanged(PowerManager powerManager)
     {
-        //TODO activate aura of the power
+        var emission = ui.particlesAura.emission;
+        emission.enabled = false;
         //TODO anim start
     }
 }
