@@ -11,7 +11,8 @@
                     "id": "1e10bac3-3f9f-41b1-b501-38cff2a843f0",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Aim",
@@ -19,7 +20,8 @@
                     "id": "8c75f869-d749-4d1c-9d25-dc22938e0c16",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Action",
@@ -27,7 +29,8 @@
                     "id": "7ed2e707-6795-4a37-8de0-ebea60b73e60",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Jump",
@@ -35,7 +38,8 @@
                     "id": "bfeecced-3355-4fde-a2e2-59d432de6ed4",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Slide",
@@ -43,7 +47,8 @@
                     "id": "66a61b4d-3fab-4771-abbc-7ca0459b07eb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "WinterPower",
@@ -51,7 +56,17 @@
                     "id": "b47d6420-1486-42b2-bd30-529779f35341",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FallPower",
+                    "type": "Button",
+                    "id": "bf2ae75f-1a02-4d04-bd50-3e7040ea92bf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PowerAction",
@@ -59,7 +74,8 @@
                     "id": "89940dbe-d9fc-4b44-8527-764e77407939",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Dash",
@@ -67,7 +83,8 @@
                     "id": "3e4d6855-a6f8-4dc0-bf44-3bb9615b55c5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -376,6 +393,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bee8ebbb-2b59-4026-a985-24802b568365",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "FallPower",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0dcc3d73-4cd9-4a2e-b0f3-c486677933af",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "FallPower",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

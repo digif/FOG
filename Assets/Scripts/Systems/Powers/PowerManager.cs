@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Vector2 = UnityEngine.Vector2;
@@ -34,11 +35,13 @@ public class PowerManager : MonoBehaviour
 
     #region Inputs
 
+    [UsedImplicitly]
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         InputValue = context.ReadValue<Vector2>();
     }
 
+    [UsedImplicitly]
     public void OnPowerWinter(InputAction.CallbackContext context)
     {
         if (!context.started) return;
@@ -48,7 +51,19 @@ public class PowerManager : MonoBehaviour
         currentPower = winterPower;
         currentPower.OnPowerSelect(this);
     }
+    
+    [UsedImplicitly]
+    public void OnPowerFall(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        if (currentPower == fallPower) return;
+            
+        currentPower?.OnPowerChanged(this);
+        currentPower = fallPower;
+        currentPower.OnPowerSelect(this);
+    }
 
+    [UsedImplicitly]
     public void OnPowerAction(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -61,6 +76,7 @@ public class PowerManager : MonoBehaviour
         }
     }
     
+    [UsedImplicitly]
     public void OnDashAction(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -73,6 +89,7 @@ public class PowerManager : MonoBehaviour
         }
     }
 
+    [UsedImplicitly]
     public void OnJumpAction(InputAction.CallbackContext context)
     {
         if (context.started)
