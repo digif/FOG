@@ -125,7 +125,7 @@ public class WinterPower : IPower
             
             rotationTween?.Kill();
             rotationTween = DOTween.To(() => playerTransform.right, x => playerTransform.right = x, playerRight, 0.1f);
-
+            
             position += new Vector3(moveDirection.x, moveDirection.y, 0) * (Time.deltaTime * 10f * (powerManager.IsFacingRight.Value ? 1f : -1f));
             playerTransform.position = position;
         }
