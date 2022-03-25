@@ -6,6 +6,7 @@ public class PowerManager : MonoBehaviour
 {
     #region Fields
 
+    public Rigidbody2D PlayerRigidbody;
     public Transform PlayerTransform;
     public BoolVariable IsFacingRight;
     

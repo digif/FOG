@@ -5,7 +5,7 @@ using UnityEngine;
 public class WinterPower : IPower
 {
     private const float ActionUseTime = 5f;
-    private const float DashUseTime = 5f;
+    private const float DashUseTime = 5000f;
     
     private WinterPowerUi ui;
     private bool isUsingPower;
@@ -62,7 +62,8 @@ public class WinterPower : IPower
         isUsingDash = true;
         // var emission = ui.particlesPower.emission;
         // emission.enabled = true;
-        
+
+        powerManager.PlayerRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
     }
 
@@ -77,6 +78,7 @@ public class WinterPower : IPower
     {
         if (!(stopCoroutine is null)) powerManager.StopCoroutine(stopCoroutine);
 
+        powerManager.PlayerRigidbody.constraints = RigidbodyConstraints2D.None;
         isUsingDash = false;
         ui.ui.SetActive(false);
         var emission = ui.particlesPower.emission;
@@ -109,7 +111,8 @@ public class WinterPower : IPower
             const int layer = 1 << 3;
             var playerRight = playerTransform.right;
             var playerUp = playerTransform.up;
-            var hit = Physics2D.Raycast(position + playerRight * 0.3f, -playerUp, 1.5f, layer);
+            var hit = Physics2D.Raycast(position + playerRight * 0.15f, -playerUp, 1.5f, layer);
+            Debug.DrawRay(position + playerRight * 0.3f, -playerUp * 1.5f, Color.black);
             
             if (hit.collider != null)
             {
@@ -120,14 +123,16 @@ public class WinterPower : IPower
                 DashStop(powerManager);
                 return;
             }
+
+            var angle = Vector3.SignedAngle(playerRight, moveDirection, Vector3.forward);
+            playerTransform.Rotate(0, 0, angle);
             
-            playerRight = moveDirection;
-            
-            rotationTween?.Kill();
-            rotationTween = DOTween.To(() => playerTransform.right, x => playerTransform.right = x, playerRight, 0.1f);
+            // rotationTween?.Kill();
+            // rotationTween = DOTween.To(() => playerTransform.right, x => playerTransform.right = x, playerRight, 0.1f);
             
             position += new Vector3(moveDirection.x, moveDirection.y, 0) * (Time.deltaTime * 10f * (powerManager.IsFacingRight.Value ? 1f : -1f));
             playerTransform.position = position;
+            if (angle != 0) Debug.Log(angle);
         }
     }
 
