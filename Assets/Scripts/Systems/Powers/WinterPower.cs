@@ -5,7 +5,7 @@ using UnityEngine;
 public class WinterPower : IPower
 {
     private const float ActionUseTime = 5f;
-    private const float DashUseTime = 5000f;
+    private const float DashUseTime = 5f;
     
     private WinterPowerUi ui;
     private bool isUsingPower;
@@ -60,10 +60,8 @@ public class WinterPower : IPower
     public override void DashStart(PowerManager powerManager)
     {
         isUsingDash = true;
-        // var emission = ui.particlesPower.emission;
-        // emission.enabled = true;
 
-        powerManager.PlayerRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+        powerManager.PlayerRigidbody.gravityScale = 0;
         stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
     }
 
@@ -78,7 +76,7 @@ public class WinterPower : IPower
     {
         if (!(stopCoroutine is null)) powerManager.StopCoroutine(stopCoroutine);
 
-        powerManager.PlayerRigidbody.constraints = RigidbodyConstraints2D.None;
+        powerManager.PlayerRigidbody.gravityScale = 8;
         isUsingDash = false;
         ui.ui.SetActive(false);
         var emission = ui.particlesPower.emission;
@@ -125,10 +123,8 @@ public class WinterPower : IPower
             }
 
             var angle = Vector3.SignedAngle(playerRight, moveDirection, Vector3.forward);
-            playerTransform.Rotate(0, 0, angle);
-            
-            // rotationTween?.Kill();
-            // rotationTween = DOTween.To(() => playerTransform.right, x => playerTransform.right = x, playerRight, 0.1f);
+            rotationTween?.Kill();
+            rotationTween = playerTransform.DORotate(playerTransform.eulerAngles + new Vector3(0, 0, angle), 0.1f);
             
             position += new Vector3(moveDirection.x, moveDirection.y, 0) * (Time.deltaTime * 10f * (powerManager.IsFacingRight.Value ? 1f : -1f));
             playerTransform.position = position;
