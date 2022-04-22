@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class FallPower : IPower
 {
+    private BoolVariable isGrounded;
+    
     private const float ActionUseTime = 5f;
     private const float DashUseTime = 0.15f;
     private const float DashSpeed = 30f;
@@ -10,6 +12,7 @@ public class FallPower : IPower
     private FallPowerUi ui;
     private bool isUsingPower;
     private bool isUsingDash;
+    private bool canDash = true;
 
     private Vector2 dashDirection;
 
@@ -18,6 +21,8 @@ public class FallPower : IPower
     public override void OnStart(PowerManager powerManager)
     {
         ui = powerManager.fallPowerUi;
+        isGrounded = powerManager.isGrounded;
+        isGrounded.OnValueChange += ResetDashUse;
     }
 
     public override void OnPowerSelect(PowerManager powerManager)
@@ -38,8 +43,16 @@ public class FallPower : IPower
         //TODO Hide Ui
     }
 
+    private void ResetDashUse()
+    {
+        if (isGrounded.Value) canDash = true;
+    }
+
     public override void DashStart(PowerManager powerManager)
     {
+        if (!canDash) return;
+
+        canDash = isGrounded.Value;
         isUsingDash = true;
 
         powerManager.PlayerRigidbody.gravityScale = 0;

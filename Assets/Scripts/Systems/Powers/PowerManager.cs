@@ -10,6 +10,7 @@ public class PowerManager : MonoBehaviour
     public Rigidbody2D PlayerRigidbody;
     public Transform PlayerTransform;
     public BoolVariable IsFacingRight;
+    public BoolVariable isGrounded;
     
     public WinterPowerUi winterPowerUi;
     public FallPowerUi fallPowerUi;
