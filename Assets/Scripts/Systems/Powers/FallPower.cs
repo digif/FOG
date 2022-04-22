@@ -11,7 +11,7 @@ public class FallPower : IPower
     private bool isUsingPower;
     private bool isUsingDash;
 
-    private Vector3 dashDirection;
+    private Vector2 dashDirection;
 
     private Coroutine stopCoroutine;
     
@@ -44,7 +44,8 @@ public class FallPower : IPower
 
         powerManager.PlayerRigidbody.gravityScale = 0;
         stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
-        powerManager.PlayerRigidbody.velocity = Vector2.zero;
+        powerManager.PlayerRigidbody.velocity = new Vector2(powerManager.PlayerRigidbody.velocity.x, 0);
+        powerManager.CanRun = false;
         
         if (powerManager.MoveInput != Vector2.zero)
         {
@@ -69,6 +70,7 @@ public class FallPower : IPower
 
         powerManager.PlayerRigidbody.gravityScale = 8;
         isUsingDash = false;
+        powerManager.CanRun = true;
     }
 
     public override void OnUpdate(PowerManager powerManager)
@@ -77,11 +79,13 @@ public class FallPower : IPower
         {
             //TODO Implement fall power
         }
-        else if (isUsingDash)
-        {
-            var playerTransform = powerManager.PlayerTransform;
+    }
 
-            playerTransform.position += dashDirection * (DashSpeed * Time.deltaTime);
+    public override void OnLateUpdate(PowerManager powerManager)
+    {
+        if (isUsingDash)
+        {
+            powerManager.PlayerRigidbody.position += dashDirection * (DashSpeed * Time.deltaTime);
         }
     }
 

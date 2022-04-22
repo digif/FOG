@@ -11,5 +11,6 @@ public abstract class IPower
     public abstract void DashStart(PowerManager powerManager);
     public abstract void DashStop(PowerManager powerManager);
     public abstract void OnUpdate(PowerManager powerManager);
+    public abstract void OnLateUpdate(PowerManager powerManager);
     public abstract void OnPowerChanged(PowerManager powerManager);
 }

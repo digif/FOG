@@ -42,7 +42,6 @@ public class PowerManager : MonoBehaviour
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        print(moveInput);
     }
     
     [UsedImplicitly]
@@ -124,5 +123,10 @@ public class PowerManager : MonoBehaviour
         currentPower?.OnUpdate(this);
     }
 
+    private void FixedUpdate()
+    {
+        currentPower?.OnLateUpdate(this);
+    }
+    
     #endregion
 }

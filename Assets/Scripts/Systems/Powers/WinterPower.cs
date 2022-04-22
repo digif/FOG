@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -87,49 +88,49 @@ public class WinterPower : IPower
 
     public override void OnUpdate(PowerManager powerManager)
     {
-        if (isUsingPower)
+        if (!isUsingPower) return;
+        if (powerManager.InputValue == Vector2.zero) return;
+            
+        var rotationValue = -Vector2.SignedAngle(powerManager.InputValue, Vector2.up);
+
+        ui.uiAim.transform.localRotation 
+            = Quaternion.AngleAxis(rotationValue, Vector3.forward);
+        ui.particlesPower.transform.parent.localRotation
+            = Quaternion.AngleAxis(rotationValue, Vector3.forward);
+    }
+
+    public override void OnLateUpdate(PowerManager powerManager)
+    {
+        if (!isUsingDash) return;
+        
+        Vector2 moveDirection;
+        var playerTransform = powerManager.PlayerTransform;
+        var position = playerTransform.position;
+
+        playerRigidbody2D.velocity = Vector2.zero;
+
+        const int layer = 1 << 3;
+        var playerRight = playerTransform.right;
+        var playerUp = playerTransform.up;
+        var hit = Physics2D.Raycast(position + playerRight * 0.15f, -playerUp, 1.5f, layer);
+        Debug.DrawRay(position + playerRight * 0.3f, -playerUp * 1.5f, Color.black);
+            
+        if (hit.collider != null)
         {
-            if (powerManager.InputValue == Vector2.zero) return;
-            
-            var rotationValue = -Vector2.SignedAngle(powerManager.InputValue, Vector2.up);
-
-            ui.uiAim.transform.localRotation 
-                = Quaternion.AngleAxis(rotationValue, Vector3.forward);
-            ui.particlesPower.transform.parent.localRotation
-                = Quaternion.AngleAxis(rotationValue, Vector3.forward);
+            moveDirection = -Vector2.Perpendicular(hit.normal).normalized;
         }
-        else if (isUsingDash)
+        else
         {
-            Vector2 moveDirection;
-            var playerTransform = powerManager.PlayerTransform;
-            var position = playerTransform.position;
-
-            playerRigidbody2D.velocity = Vector2.zero;
-
-            const int layer = 1 << 3;
-            var playerRight = playerTransform.right;
-            var playerUp = playerTransform.up;
-            var hit = Physics2D.Raycast(position + playerRight * 0.15f, -playerUp, 1.5f, layer);
-            Debug.DrawRay(position + playerRight * 0.3f, -playerUp * 1.5f, Color.black);
-            
-            if (hit.collider != null)
-            {
-                moveDirection = -Vector2.Perpendicular(hit.normal).normalized;
-            }
-            else
-            {
-                DashStop(powerManager);
-                return;
-            }
-
-            var angle = Vector3.SignedAngle(playerRight, moveDirection, Vector3.forward);
-            rotationTween?.Kill();
-            rotationTween = playerTransform.DORotate(playerTransform.eulerAngles + new Vector3(0, 0, angle), 0.1f);
-            
-            position += new Vector3(moveDirection.x, moveDirection.y, 0) * (Time.deltaTime * 10f * (powerManager.IsFacingRight.Value ? 1f : -1f));
-            playerTransform.position = position;
-            if (angle != 0) Debug.Log(angle);
+            DashStop(powerManager);
+            return;
         }
+
+        var angle = Vector3.SignedAngle(playerRight, moveDirection, Vector3.forward);
+        rotationTween?.Kill();
+        rotationTween = playerTransform.DORotate(playerTransform.eulerAngles + new Vector3(0, 0, angle), 0.1f);
+            
+        position += new Vector3(moveDirection.x, moveDirection.y, 0) * (Time.deltaTime * 10f * (powerManager.IsFacingRight.Value ? 1f : -1f));
+        playerTransform.position = position;
     }
 
     public override void OnPowerChanged(PowerManager powerManager)
