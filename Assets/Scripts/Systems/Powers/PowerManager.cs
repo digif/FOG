@@ -20,6 +20,7 @@ public class PowerManager : MonoBehaviour
 
     [SerializeField] private BoolVariable canRun = null;
     [SerializeField] private Vector2Variable moveDirection = null;
+    private Vector2 moveInput;
 
     private IPower currentPower;
 
@@ -28,6 +29,7 @@ public class PowerManager : MonoBehaviour
     #region Properties
 
     public Vector2 MoveDirection => moveDirection.Value;
+    public Vector2 MoveInput => moveInput;
     public Vector2 InputValue { get; private set; }
     
     public bool CanRun { set => canRun.Value = value; }
@@ -35,9 +37,16 @@ public class PowerManager : MonoBehaviour
     #endregion
 
     #region Inputs
-
+    
     [UsedImplicitly]
     public void OnMoveInput(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+        print(moveInput);
+    }
+    
+    [UsedImplicitly]
+    public void OnAimInput(InputAction.CallbackContext context)
     {
         InputValue = context.ReadValue<Vector2>();
     }

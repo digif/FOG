@@ -1,16 +1,17 @@
 using System.Collections;
-using DG.Tweening;
 using UnityEngine;
 
 public class FallPower : IPower
 {
     private const float ActionUseTime = 5f;
     private const float DashUseTime = 0.15f;
-    private const float DashSpeed = 50f;
+    private const float DashSpeed = 30f;
     
     private FallPowerUi ui;
     private bool isUsingPower;
     private bool isUsingDash;
+
+    private Vector3 dashDirection;
 
     private Coroutine stopCoroutine;
     
@@ -43,11 +44,20 @@ public class FallPower : IPower
 
         powerManager.PlayerRigidbody.gravityScale = 0;
         stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
+        powerManager.PlayerRigidbody.velocity = Vector2.zero;
+        
+        if (powerManager.MoveInput != Vector2.zero)
+        {
+            dashDirection = powerManager.MoveInput.normalized;
+        }
+        else
+        {
+            dashDirection = powerManager.IsFacingRight.Value ? Vector3.right : Vector3.left;
+        }
     }
     
     private IEnumerator StopDash(PowerManager powerManager)
     {
-        Debug.Log(DashUseTime);
         yield return new WaitForSecondsRealtime(DashUseTime);
         
         DashStop(powerManager);
@@ -71,8 +81,7 @@ public class FallPower : IPower
         {
             var playerTransform = powerManager.PlayerTransform;
 
-            playerTransform.position += playerTransform.right *
-                                        ((powerManager.IsFacingRight.Value ? 1 : -1) * DashSpeed * Time.deltaTime);
+            playerTransform.position += dashDirection * (DashSpeed * Time.deltaTime);
         }
     }
 
