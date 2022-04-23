@@ -14,6 +14,7 @@ public class FallPower : IPower
     private bool isUsingPower;
     private bool isUsingDash;
     private bool canDash = true;
+    private float lastDashUseTime;
 
     private Vector2 dashDirection;
 
@@ -23,6 +24,7 @@ public class FallPower : IPower
     {
         ui = powerManager.fallPowerUi;
         isGrounded = powerManager.isGrounded;
+        isGrounded.OnValueChange += ResetDashUse;
     }
 
     public override void OnPowerSelect(PowerManager powerManager)
@@ -45,15 +47,16 @@ public class FallPower : IPower
 
     private void ResetDashUse()
     {
-        canDash = true;
+        if (isGrounded.Value && lastDashUseTime + DashCooldown <= Time.time) canDash = true;
     }
 
     public override void DashStart(PowerManager powerManager)
     {
-        if (!canDash || !isGrounded.Value) return;
+        if (!canDash) return;
 
         canDash = false;
         isUsingDash = true;
+        lastDashUseTime = Time.time;
 
         powerManager.PlayerRigidbody.gravityScale = 0;
         stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
@@ -73,7 +76,7 @@ public class FallPower : IPower
 
     private IEnumerator DashCooldownReset()
     {
-        yield return new WaitForSeconds(DashCooldown);
+        yield return new WaitForSeconds(DashCooldown + Time.deltaTime);
         
         ResetDashUse();
     }
