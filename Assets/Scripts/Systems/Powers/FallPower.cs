@@ -8,7 +8,8 @@ public class FallPower : IPower
     private const float ActionUseTime = 5f;
     private const float DashUseTime = 0.15f;
     private const float DashSpeed = 30f;
-    
+    private const float DashCooldown = 0.5f;
+
     private FallPowerUi ui;
     private bool isUsingPower;
     private bool isUsingDash;
@@ -22,7 +23,6 @@ public class FallPower : IPower
     {
         ui = powerManager.fallPowerUi;
         isGrounded = powerManager.isGrounded;
-        isGrounded.OnValueChange += ResetDashUse;
     }
 
     public override void OnPowerSelect(PowerManager powerManager)
@@ -45,18 +45,19 @@ public class FallPower : IPower
 
     private void ResetDashUse()
     {
-        if (isGrounded.Value) canDash = true;
+        canDash = true;
     }
 
     public override void DashStart(PowerManager powerManager)
     {
-        if (!canDash) return;
+        if (!canDash || !isGrounded.Value) return;
 
-        canDash = isGrounded.Value;
+        canDash = false;
         isUsingDash = true;
 
         powerManager.PlayerRigidbody.gravityScale = 0;
         stopCoroutine = powerManager.StartCoroutine(StopDash(powerManager));
+        powerManager.StartCoroutine(DashCooldownReset());
         powerManager.PlayerRigidbody.velocity = new Vector2(powerManager.PlayerRigidbody.velocity.x, 0);
         powerManager.CanRun = false;
         
@@ -68,6 +69,13 @@ public class FallPower : IPower
         {
             dashDirection = powerManager.IsFacingRight.Value ? Vector3.right : Vector3.left;
         }
+    }
+
+    private IEnumerator DashCooldownReset()
+    {
+        yield return new WaitForSeconds(DashCooldown);
+        
+        ResetDashUse();
     }
     
     private IEnumerator StopDash(PowerManager powerManager)
