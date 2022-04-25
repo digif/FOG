@@ -874,7 +874,7 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 0.23584908, g: 0.21026169, b: 0.21026169, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+  m_ShapeTexture: {fileID: 0}
   m_Sprites:
   - {fileID: -8526609670385672293, guid: 40bae3128abd9794e94b5c11803f0bf7, type: 3}
   - {fileID: -433713183497114083, guid: 40bae3128abd9794e94b5c11803f0bf7, type: 3}
@@ -1295,7 +1295,7 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+  m_ShapeTexture: {fileID: 0}
   m_Sprites:
   - {fileID: -8526609670385672293, guid: 40bae3128abd9794e94b5c11803f0bf7, type: 3}
   - {fileID: -433713183497114083, guid: 40bae3128abd9794e94b5c11803f0bf7, type: 3}
@@ -1489,7 +1489,7 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+  m_ShapeTexture: {fileID: 0}
   m_Sprites:
   - {fileID: -8526609670385672293, guid: 40bae3128abd9794e94b5c11803f0bf7, type: 3}
   - {fileID: -433713183497114083, guid: 40bae3128abd9794e94b5c11803f0bf7, type: 3}
@@ -41299,7 +41299,7 @@ GameObject:
   - component: {fileID: 1452608498}
   - component: {fileID: 1452608497}
   - component: {fileID: 1452608496}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Clef 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42159,6 +42159,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4096670387040409226, guid: abf17922d84107d4982fed86704befd1, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5783368742686758239, guid: abf17922d84107d4982fed86704befd1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -42390,7 +42394,7 @@ GameObject:
   - component: {fileID: 1875063159}
   - component: {fileID: 1875063158}
   - component: {fileID: 1875063157}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Clef 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42491,7 +42495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875063156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.66, y: -2.64, z: 0}
+  m_LocalPosition: {x: 39.54, y: -12.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42630,7 +42634,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlackLand: {fileID: 314208303}
-  anim: {fileID: 886309537}
 --- !u!1 &2002735376
 GameObject:
   m_ObjectHideFlags: 0
@@ -43065,7 +43068,7 @@ GameObject:
   - component: {fileID: 2121731069}
   - component: {fileID: 2121731068}
   - component: {fileID: 2121731067}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Clef 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
