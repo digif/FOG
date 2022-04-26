@@ -10,7 +10,7 @@ public class WallJump : MonoBehaviour
     [SerializeField] private BoolVariable isFacingRight = null;
     [SerializeField] private GameEvent OnJump = null;
 
-    private const float jumpDelay = 0.75f;
+    private const float jumpDelay = 0.01f;
     private float lastWallJump = 0f;
     private Transform myTransform;
     private Rigidbody2D myRigidbody;
@@ -53,7 +53,7 @@ public class WallJump : MonoBehaviour
 
         lastWallJump = Time.time;
         //TODO change to add force
-        myRigidbody.AddForce(new Vector2((isFacingRight.Value ? -jumpPower.Value : jumpPower.Value) * .5f, jumpPower.Value * 0.5f), ForceMode2D.Impulse);
+        myRigidbody.AddForce(new Vector2((isFacingRight.Value ? -jumpPower.Value : jumpPower.Value) * .1f, jumpPower.Value * 0.1f), ForceMode2D.Impulse);
         isAgainstWall.Value = false;
         OnJump.Raise();
     }
