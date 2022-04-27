@@ -43,7 +43,11 @@ MonoBehaviour:
   Name: Master
   StudioPath: bank:/Master
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 637866956079303754
+=======
+  lastModified: 637866515180000000
+>>>>>>> f42056f369e8ac94143a1749f93b5db7b90d4a0c
 =======
   lastModified: 637866515180000000
 >>>>>>> f42056f369e8ac94143a1749f93b5db7b90d4a0c
@@ -133,7 +137,11 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8787761565957675322}
 <<<<<<< HEAD
+<<<<<<< HEAD
   cacheTime: 637866956079343645
+=======
+  cacheTime: 637866515180000000
+>>>>>>> f42056f369e8ac94143a1749f93b5db7b90d4a0c
 =======
   cacheTime: 637866515180000000
 >>>>>>> f42056f369e8ac94143a1749f93b5db7b90d4a0c
@@ -334,7 +342,11 @@ MonoBehaviour:
   Name: Master.strings
   StudioPath: bank:/Master.strings
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 637866956079343645
+=======
+  lastModified: 637866515040000000
+>>>>>>> f42056f369e8ac94143a1749f93b5db7b90d4a0c
 =======
   lastModified: 637866515040000000
 >>>>>>> f42056f369e8ac94143a1749f93b5db7b90d4a0c
