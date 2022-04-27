@@ -6,9 +6,7 @@ public class PlayerSounds : MonoBehaviour
 
     [SerializeField] private BoolVariable isSliding = null;
     [SerializeField] private BoolVariable isGrounded = null;
-    [SerializeField] private BoolVariable isFacingRight = null;
     [SerializeField] private BoolVariable isMoving = null;
-    [SerializeField] private SpriteRenderer playerSprite;
 
     [SerializeField] private Rigidbody2D playerRigidbody;
     
@@ -29,6 +27,7 @@ public class PlayerSounds : MonoBehaviour
         isGrounded.OnValueChange -= Grounded;
         isMoving.OnValueChange -= Move;
     }
+    
     private void Update()
     {
         //TODO executé chaque frame
@@ -42,6 +41,8 @@ public class PlayerSounds : MonoBehaviour
     {
         //TODO Quand le pouvoir de l'automne est lancé
     }
+    
+    //TODO add more powers and dashs
     
     public void OnDeath() 
     {
