@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 491473571
     Data4: -707810475
   Banks:
-  - {fileID: 7009936172180461375}
+  - {fileID: -6467483503273312751}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -27,6 +27,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 125
+--- !u!114 &-6467483503273312751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637866515180000000
+  FileSizes:
+  - Name: Desktop
+    Value: 7024256
+  Exists: 1
 --- !u!114 &-1708715893720876889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,7 +66,7 @@ MonoBehaviour:
     Data3: 857763232
     Data4: -1972651627
   Banks:
-  - {fileID: 7009936172180461375}
+  - {fileID: -6467483503273312751}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -94,8 +114,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 9016215344679318184}
-  - {fileID: 7009936172180461375}
+  - {fileID: 8787761565957675322}
+  - {fileID: -6467483503273312751}
   EditorEvents:
   - {fileID: -1708715893720876889}
   - {fileID: 1225573152818660643}
@@ -105,10 +125,10 @@ MonoBehaviour:
   EditorParameters:
   - {fileID: 2454092879307503916}
   MasterBanks:
-  - {fileID: 7009936172180461375}
+  - {fileID: -6467483503273312751}
   StringsBanks:
-  - {fileID: 9016215344679318184}
-  cacheTime: 637866766819432754
+  - {fileID: 8787761565957675322}
+  cacheTime: 637866515180000000
   cacheVersion: 10
 --- !u!114 &504754229723201567
 MonoBehaviour:
@@ -129,7 +149,7 @@ MonoBehaviour:
     Data3: 932307644
     Data4: -1869366280
   Banks:
-  - {fileID: 7009936172180461375}
+  - {fileID: -6467483503273312751}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -181,7 +201,7 @@ MonoBehaviour:
     Data3: 1841134731
     Data4: -143297947
   Banks:
-  - {fileID: 7009936172180461375}
+  - {fileID: -6467483503273312751}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -232,7 +252,7 @@ MonoBehaviour:
     Data3: -1676389234
     Data4: -1082750246
   Banks:
-  - {fileID: 7009936172180461375}
+  - {fileID: -6467483503273312751}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -264,26 +284,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7009936172180461375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: F:/FOG/Fog platformer/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637866766818517248
-  FileSizes:
-  - Name: Desktop
-    Value: 7024256
-  Exists: 1
 --- !u!114 &7858532087226475999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   - "Pas jou\xE9e en entier"
   - "Jou\xE9e en entier"
   Exists: 1
---- !u!114 &9016215344679318184
+--- !u!114 &8787761565957675322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,10 +322,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: F:/FOG/Fog platformer/Build/Desktop/Master.strings.bank
+  Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637866766819432754
+  lastModified: 637866515040000000
   FileSizes:
   - Name: Desktop
     Value: 1138
