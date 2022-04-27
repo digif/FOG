@@ -1,7 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class PlayerAnimation : MonoBehaviour
+public class PlayerSounds : MonoBehaviour
 {
     #region Fields
 
@@ -13,16 +12,12 @@ public class PlayerAnimation : MonoBehaviour
 
     [SerializeField] private Rigidbody2D playerRigidbody;
     
-    private Animator animator = null;
-
     #endregion
 
     #region Unity Events Methods
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-
         isSliding.OnValueChange += Slide;
         isGrounded.OnValueChange += Grounded;
         isFacingRight.OnValueChange += FacingRight;
@@ -36,10 +31,9 @@ public class PlayerAnimation : MonoBehaviour
         isFacingRight.OnValueChange -= FacingRight;
         isMoving.OnValueChange -= Move;
     }
-    
     private void Update()
     {
-        animator.SetFloat(AnimatorHash.VerticalSpeed, playerRigidbody.velocity.y);
+        //TODO executé chaque frame
     }
     
     #endregion
@@ -48,38 +42,47 @@ public class PlayerAnimation : MonoBehaviour
 
     public void OnAutumnPower()
     {
-        animator.SetTrigger(AnimatorHash.Power);
+        //TODO Quand le pouvoir de l'automne est lancé
     }
     
     public void OnDeath() 
     {
-        animator.SetTrigger(AnimatorHash.Death);
+        //TODO Quand on meurt
     }
 
     private void Slide()
     {
-        animator.SetBool(AnimatorHash.Slide, isSliding.Value);
+        //TODO Quand on glisse
     }
 
     private void Grounded()
     {
         if (isGrounded.Value)
         {
-            animator.SetTrigger(AnimatorHash.Land);
+            //TODO Quand on atterri
             return;
         }
 
-        animator.SetTrigger(playerRigidbody.velocity.y > 0.1f ? AnimatorHash.Jump : AnimatorHash.Fall);
+        if (playerRigidbody.velocity.y > 0.1f)
+        {
+            //TODO Quand on va vers le haut (saut)
+        }
+        else
+        {
+            //TODO quand on est en chute libre
+        }
     }
-
-    private void FacingRight()
-    {
-        playerSprite.flipX = !isFacingRight.Value;
-    }
-
+    
     private void Move()
     {
-        animator.SetBool(AnimatorHash.Move, isMoving.Value);
+        if (isMoving.Value)
+        {
+            //TODO Quand on bouge
+        }
+        else
+        {
+            //TODO Quand on s'arrête
+        }
     }
 
     #endregion
