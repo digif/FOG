@@ -20,7 +20,6 @@ public class PlayerSounds : MonoBehaviour
     {
         isSliding.OnValueChange += Slide;
         isGrounded.OnValueChange += Grounded;
-        isFacingRight.OnValueChange += FacingRight;
         isMoving.OnValueChange += Move;
     }
 
@@ -28,7 +27,6 @@ public class PlayerSounds : MonoBehaviour
     {
         isSliding.OnValueChange -= Slide;
         isGrounded.OnValueChange -= Grounded;
-        isFacingRight.OnValueChange -= FacingRight;
         isMoving.OnValueChange -= Move;
     }
     private void Update()
