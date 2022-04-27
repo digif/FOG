@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9dabe1b0-0b4d-4ed3-a0cd-c7f55ef777df}">
+		<property name="assetPath">
+			<value>Pouvoir.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.344489795918367</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8d3b84f7-f3b1-4335-b8a7-70b2c06139f4}</destination>
+		</relationship>
+	</object>
+</objects>

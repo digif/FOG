@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4ccbdc47-1e27-4e07-8e27-1400f4b3d96e}">
+		<property name="assetPath">
+			<value>Fog platformer 4.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>114.62687074829932</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8d3b84f7-f3b1-4335-b8a7-70b2c06139f4}</destination>
+		</relationship>
+	</object>
+</objects>

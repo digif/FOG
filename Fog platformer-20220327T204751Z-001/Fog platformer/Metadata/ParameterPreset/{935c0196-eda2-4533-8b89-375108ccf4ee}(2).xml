@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{935c0196-eda2-4533-8b89-375108ccf4ee}">
+		<property name="name">
+			<value>Clefs</value>
+		</property>
+		<relationship name="folder">
+			<destination>{79d8b28e-c4b6-449f-a73f-c524d632621d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{24dc3b1a-1f4e-4cc2-b894-c3e29f3c42ce}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{24dc3b1a-1f4e-4cc2-b894-c3e29f3c42ce}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
