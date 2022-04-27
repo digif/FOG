@@ -59,14 +59,14 @@ public class PlayerSounds : MonoBehaviour
         if (isGrounded.Value)
         {
             //TODO Quand on atterri
-            FMODUnity.RuntimeManager.PlayOneShot("event:SD/Gardien/Atterissage", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SD/Gardien/Atterissage", GetComponent<Transform>().position);
             return;
         }
 
         if (playerRigidbody.velocity.y > 0.1f)
         {
             //TODO Quand on va vers le haut (saut)
-            FMODUnity.RuntimeManager.PlayOneShot("event:SD/Gardien/Jump", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SD/Gardien/Jump", GetComponent<Transform>().position);
         }
         else
         {
@@ -79,7 +79,7 @@ public class PlayerSounds : MonoBehaviour
         if (isMoving.Value)
         {
             //TODO Quand on bouge
-            FMODUnity.RuntimeManager.PlayOneShot("event:SD/Gardien/Footstep Walk", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SD/Gardien/Footstep_Walk", GetComponent<Transform>().position);
         }
         else
         {
