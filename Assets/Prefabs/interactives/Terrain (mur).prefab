@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 607293857945582044}
   - component: {fileID: 8364184245471700971}
   m_Layer: 0
-  m_Name: terrain
+  m_Name: Terrain (mur)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

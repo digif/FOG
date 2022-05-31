@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: -5185160854702639759}
   - component: {fileID: -7177301348729301311}
   - component: {fileID: 8736017233881205984}
+  - component: {fileID: 7494616109358699634}
   m_Layer: 0
-  m_Name: roots
+  m_Name: Racine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,3 +202,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &7494616109358699634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781233123474239385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376c780f9a647e944b3000d8c6ed5aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
