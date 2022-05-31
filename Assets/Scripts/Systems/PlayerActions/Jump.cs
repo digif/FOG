@@ -43,7 +43,6 @@ public class Jump : MonoBehaviour
         resetGroundedCoroutine = StartCoroutine(SetGrounded(true, 0.1f));
 
         groundCount++;
-        isGrounded.Value = true;
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -98,8 +97,10 @@ public class Jump : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        isGrounded.Value = value && Physics2D.CircleCast(myTransform.position - myTransform.up * 0.8f, 0.4f, Vector2.down, 0f, 1 << 3).collider;
-    }
+        var hit = Physics2D.CircleCast(myTransform.position - myTransform.up * 0.8f, 0.2f, Vector2.down, 0f, 1 << 3);
 
+        isGrounded.Value = value && hit.collider != null;
+    }
+    
     #endregion
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{122d2dbb-a25b-4b2e-8c15-702945affa80}">
+		<property name="name">
+			<value>Pouvoir</value>
+		</property>
+		<relationship name="folder">
+			<destination>{79d8b28e-c4b6-449f-a73f-c524d632621d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6b14cd9b-535f-431e-bd45-a639bbd44344}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6b14cd9b-535f-431e-bd45-a639bbd44344}">
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

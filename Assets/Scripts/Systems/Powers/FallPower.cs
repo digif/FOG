@@ -7,7 +7,7 @@ public class FallPower : IPower
     
     private const float ActionUseTime = 5f;
     private const float DashUseTime = 0.15f;
-    private const float DashSpeed = 30f;
+    private const float DashSpeed = 20f;
     private const float DashCooldown = 0.5f;
 
     private FallPowerUi ui;
