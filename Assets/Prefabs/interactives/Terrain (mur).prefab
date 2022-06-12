@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6276273291979726054}
   - component: {fileID: 607293857945582044}
   - component: {fileID: 8364184245471700971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (mur)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

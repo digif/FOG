@@ -3,7 +3,10 @@ guid: d0db16036e916174bb8dadefe429be5e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
+  - onReset: {fileID: 11400000, guid: 472b2a63613822a4c871c6273aab50df, type: 2}
+  - isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
