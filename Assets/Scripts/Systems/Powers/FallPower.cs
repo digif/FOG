@@ -22,6 +22,8 @@ public class FallPower : IPower
     
     public override void OnStart(PowerManager powerManager)
     {
+        PowerType = PowerType.Fall;
+        
         ui = powerManager.fallPowerUi;
         isGrounded = powerManager.isGrounded;
         isGrounded.OnValueChange += ResetDashUse;

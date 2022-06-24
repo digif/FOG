@@ -1,5 +1,7 @@
 public abstract class IPower
 {
+    public PowerType PowerType;
+    
     private const float cooldown = 1f;
     private float _lastPowerUse = 0;
     private float _lastDashUse = 0;

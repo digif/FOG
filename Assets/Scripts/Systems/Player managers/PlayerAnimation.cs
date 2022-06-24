@@ -46,8 +46,9 @@ public class PlayerAnimation : MonoBehaviour
 
     #region Events
 
-    public void OnAutumnPower()
+    public void OnPower(PowerType powerType)
     {
+        //TODO add animmation depending on powerType
         animator.SetTrigger(AnimatorHash.Power);
     }
     

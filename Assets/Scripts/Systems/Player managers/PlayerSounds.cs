@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerSounds : MonoBehaviour
@@ -37,9 +38,25 @@ public class PlayerSounds : MonoBehaviour
 
     #region Events
 
-    public void OnAutumnPower()
+    public void OnPower(PowerType powerType)
     {
-        //TODO Quand le pouvoir de l'automne est lancé
+        switch (powerType)
+        {
+            case PowerType.Fall:
+                //TODO add code here
+                break;
+            case PowerType.Winter:
+                //TODO add code here
+                break;
+            case PowerType.Spring:
+                //TODO add code here
+                break;
+            case PowerType.Summer:
+                //TODO add code here
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(powerType), powerType, null);
+        }
     }
     
     //TODO add more powers and dashs

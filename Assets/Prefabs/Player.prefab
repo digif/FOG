@@ -19787,6 +19787,7 @@ MonoBehaviour:
   fallPowerUi: {fileID: 5308789236822753121}
   canRun: {fileID: 11400000, guid: e86e3c02c54d6784a8a50a78e33a05be, type: 2}
   moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
+  onPowerEvent: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
 --- !u!1 &7994347526125581988
 GameObject:
   m_ObjectHideFlags: 0
@@ -19798,6 +19799,7 @@ GameObject:
   - component: {fileID: 7994347526125581989}
   - component: {fileID: 7994347526125581991}
   - component: {fileID: 2481734603232221900}
+  - component: {fileID: 4663727225450131615}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Player
@@ -19922,6 +19924,34 @@ MonoBehaviour:
   isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
   isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
   playerRigidbody: {fileID: 4096670387040409226}
+--- !u!114 &4663727225450131615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526125581988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05506f9a5e72024093a6920215731f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerEventSo: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
+  listeners:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2481734603232221900}
+        m_TargetAssemblyTypeName: PlayerSounds, Assembly-CSharp
+        m_MethodName: OnPower
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7994347526497175212
 GameObject:
   m_ObjectHideFlags: 0
@@ -19935,7 +19965,7 @@ GameObject:
   - component: {fileID: 7994347526497175214}
   - component: {fileID: 7994347526497175208}
   - component: {fileID: 6936604205904484535}
-  - component: {fileID: 633575628144152520}
+  - component: {fileID: 8135681477539648134}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Player
@@ -20073,7 +20103,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &633575628144152520
+--- !u!114 &8135681477539648134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20082,17 +20112,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7994347526497175212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e7b551f34f7944b8a99084419a8ed2, type: 3}
+  m_Script: {fileID: 11500000, guid: a05506f9a5e72024093a6920215731f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsVoidEventSo: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
+  powerEventSo: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
   listeners:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7994347526497175208}
         m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
-        m_MethodName: OnAutumnPower
-        m_Mode: 1
+        m_MethodName: OnPower
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

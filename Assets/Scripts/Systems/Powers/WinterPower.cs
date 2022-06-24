@@ -18,6 +18,8 @@ public class WinterPower : IPower
     
     public override void OnStart(PowerManager powerManager)
     {
+        PowerType = PowerType.Winter;
+        
         playerRigidbody2D = powerManager.PlayerTransform.GetComponent<Rigidbody2D>();
         ui = powerManager.winterPowerUi;
     }
