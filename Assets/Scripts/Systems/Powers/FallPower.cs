@@ -35,6 +35,16 @@ public class FallPower : IPower
 
     public override void UseStart(PowerManager powerManager)
     {
+        isUsingPower = true;
+        ui.ui.SetActive(true);
+        var emission = ui.particlesPower.emission;
+        emission.enabled = true;
+        
+        var rotationValue = powerManager.IsFacingRight.Value ? -90 : 90;
+        ui.particlesPower.transform.parent.localRotation
+            = Quaternion.AngleAxis(rotationValue, Vector3.forward);
+        
+        //powerManager.StartCoroutine(StopAction(powerManager));
         //TODO stop player movements
         //TODO Show Ui
     }
