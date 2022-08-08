@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Systems.Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Vector2 = UnityEngine.Vector2;
@@ -24,6 +25,8 @@ public class PowerManager : MonoBehaviour
     private Vector2 moveInput;
 
     private IPower currentPower;
+
+    [SerializeField] private PowerEventSo onPowerEvent;
 
     #endregion
 
@@ -79,6 +82,7 @@ public class PowerManager : MonoBehaviour
         if (context.started)
         {
             currentPower?.UseStart(this);
+            if (currentPower != null) onPowerEvent.Invoke(currentPower.PowerType);
         }
         else if (context.canceled)
         {

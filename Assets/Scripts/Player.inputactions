@@ -233,17 +233,6 @@
                 },
                 {
                     "name": "",
-                    "id": "2321b29f-59a4-4d13-b8ee-c6502d7f4443",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Slide",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "568829d4-5a24-49af-ac1b-641c908eb601",
                     "path": "<Keyboard>/s",
                     "interactions": "",

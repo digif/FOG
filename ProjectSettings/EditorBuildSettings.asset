@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Tests/Carcaroux.unity
+    guid: f447b6dcefc96d141810d9ae4ed7992a
   m_configObjects: {}

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 37f845665330ceb43a1b9d77ff073ba0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - onReset: {fileID: 11400000, guid: 472b2a63613822a4c871c6273aab50df, type: 2}
+  - playerPosition: {instanceID: 0}
+  - currentRespawnPoint: {fileID: 11400000, guid: 40bcc73aa06d23c41af237455bcbc5a3, type: 2}
+  - onUnpause: {fileID: 11400000, guid: 2ba06b4a006e51e46ac25a06755d16fe, type: 2}
+  - isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

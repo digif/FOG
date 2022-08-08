@@ -1,129 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2256036267286841163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637860928897203796
-  FileSizes:
-  - Name: Desktop
-    Value: 904
-  Exists: 1
---- !u!114 &-1708715893720876889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Musique/Platformer
-  m_EditorClassIdentifier: 
-  Path: event:/Musique/Platformer
-  Guid:
-    Data1: 976233538
-    Data2: 1124014624
-    Data3: 857763232
-    Data4: -1972651627
-  Banks:
-  - {fileID: 7634517325218718861}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 987535836179595284}
-  - {fileID: 3064488179216665783}
-  - {fileID: 7858532087226475999}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 107440
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -2256036267286841163}
-  - {fileID: 7634517325218718861}
-  EditorEvents:
-  - {fileID: -1708715893720876889}
-  EditorParameters:
-  - {fileID: 2454092879307503916}
-  MasterBanks:
-  - {fileID: 7634517325218718861}
-  StringsBanks:
-  - {fileID: -2256036267286841163}
-  cacheTime: 637860928897203796
-  cacheVersion: 10
---- !u!114 &987535836179595284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Platformer/Mort
-  m_EditorClassIdentifier: 
-  Name: Mort
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 750215198
-    data2: 374819733
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &2454092879307503916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Mort
-  m_EditorClassIdentifier: 
-  Name: Mort
-  StudioPath: parameter:/Mort
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 750215198
-    data2: 374819733
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &3064488179216665783
+--- !u!114 &-8898740486243692368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +24,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7634517325218718861
+--- !u!114 &-7106274974957519062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,18 +33,101 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Mort
   m_EditorClassIdentifier: 
-  Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637860928897203796
-  FileSizes:
-  - Name: Desktop
-    Value: 6559680
+  Name: Mort
+  StudioPath: parameter:/Mort
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 750215198
+    data2: 374819733
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1
---- !u!114 &7858532087226475999
+--- !u!114 &-6474810566500071112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Gardien/Footstep_Walk
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Gardien/Footstep_Walk
+  Guid:
+    Data1: 1277900128
+    Data2: 1161170759
+    Data3: 491473571
+    Data4: -707810475
+  Banks:
+  - {fileID: 5358419289928090647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125
+--- !u!114 &-3947201118836661094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Gardien/Dash event
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Gardien/Dash event
+  Guid:
+    Data1: 52614062
+    Data2: 1083311227
+    Data3: 932307644
+    Data4: -1869366280
+  Banks:
+  - {fileID: 5358419289928090647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2489238684182547605}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2489238684182547605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dash event/Saisons
+  m_EditorClassIdentifier: 
+  Name: Saisons
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3090644969
+    data2: 357138317
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1979089279131519595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,3 +153,180 @@ MonoBehaviour:
   - "Pas jou\xE9e en entier"
   - "Jou\xE9e en entier"
   Exists: 1
+--- !u!114 &-1379430355973238936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637895627125015871
+  FileSizes:
+  - Name: Desktop
+    Value: 1138
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -1379430355973238936}
+  - {fileID: 5358419289928090647}
+  EditorEvents:
+  - {fileID: 2267315541417271380}
+  - {fileID: 7860494550666714395}
+  - {fileID: -6474810566500071112}
+  - {fileID: 2673560470534602100}
+  - {fileID: -3947201118836661094}
+  EditorParameters:
+  - {fileID: -7106274974957519062}
+  MasterBanks:
+  - {fileID: 5358419289928090647}
+  StringsBanks:
+  - {fileID: -1379430355973238936}
+  cacheTime: 637895627125015871
+  cacheVersion: 10
+--- !u!114 &2267315541417271380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Gardien/Atterissage
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Gardien/Atterissage
+  Guid:
+    Data1: 248132129
+    Data2: 1135220506
+    Data3: 1841134731
+    Data4: -143297947
+  Banks:
+  - {fileID: 5358419289928090647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &2673560470534602100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Gardien/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Gardien/Jump
+  Guid:
+    Data1: 1730627996
+    Data2: 1112447453
+    Data3: -1676389234
+    Data4: -1082750246
+  Banks:
+  - {fileID: 5358419289928090647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &5358419289928090647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637895627125005864
+  FileSizes:
+  - Name: Desktop
+    Value: 7024256
+  Exists: 1
+--- !u!114 &7428365240324166443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Platformer/Mort
+  m_EditorClassIdentifier: 
+  Name: Mort
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 750215198
+    data2: 374819733
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7860494550666714395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Musique/Platformer
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/Platformer
+  Guid:
+    Data1: 976233538
+    Data2: 1124014624
+    Data3: 857763232
+    Data4: -1972651627
+  Banks:
+  - {fileID: 5358419289928090647}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7428365240324166443}
+  - {fileID: -8898740486243692368}
+  - {fileID: -1979089279131519595}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 107440

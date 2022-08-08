@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6256594609868175993}
   - component: {fileID: -3373849064434447243}
   m_Layer: 0
-  m_Name: tororo
+  m_Name: Tororo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

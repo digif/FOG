@@ -36,6 +36,7 @@ public class PlayerAnimation : MonoBehaviour
         isFacingRight.OnValueChange -= FacingRight;
         isMoving.OnValueChange -= Move;
     }
+    
     private void Update()
     {
         animator.SetFloat(AnimatorHash.VerticalSpeed, playerRigidbody.velocity.y);
@@ -45,8 +46,9 @@ public class PlayerAnimation : MonoBehaviour
 
     #region Events
 
-    public void OnAutumnPower ()
+    public void OnPower(PowerType powerType)
     {
+        //TODO add animmation depending on powerType
         animator.SetTrigger(AnimatorHash.Power);
     }
     

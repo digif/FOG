@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 58a551a635d67b54ba7b9326aa1916dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
+  - onPause: {fileID: 11400000, guid: da6b4075888f5774eb6c801f6fd0ed2b, type: 2}
+  - isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  - isPaused: {fileID: 11400000, guid: 30d0c7059900e16489a23ea581706632, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
