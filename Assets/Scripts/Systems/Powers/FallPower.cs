@@ -45,16 +45,15 @@ public class FallPower : IPower
         var rotationValue = powerManager.IsFacingRight.Value ? -90 : 90;
         ui.particlesPower.transform.parent.localRotation
             = Quaternion.AngleAxis(rotationValue, Vector3.forward);
-        
-        //powerManager.StartCoroutine(StopAction(powerManager));
-        //TODO stop player movements
-        //TODO Show Ui
+        ui.collider.SetActive(true);
     }
 
     public override void UseStop(PowerManager powerManager)
     {
         //TODO Allow player to move
         //TODO Hide Ui
+        
+        ui.collider.SetActive(false);
     }
 
     private void ResetDashUse()
@@ -111,10 +110,12 @@ public class FallPower : IPower
 
     public override void OnUpdate(PowerManager powerManager)
     {
-        if (isUsingPower)
-        {
-            //TODO Implement fall power
-        }
+        if (!isUsingPower) return;
+
+        //TODO change this to use IsFacingRight.OnValueCHanged
+        var rotationValue = powerManager.IsFacingRight.Value ? -90 : 90;
+        ui.particlesPower.transform.parent.localRotation
+            = Quaternion.AngleAxis(rotationValue, Vector3.forward);
     }
 
     public override void OnLateUpdate(PowerManager powerManager)

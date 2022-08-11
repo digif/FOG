@@ -249,6 +249,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1924,6 +1925,82 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DeepForestTileset_31: 5557148572958020503
+      DeepForestTileset_0: 8493671245043655595
+      DeepForestTileset_53: 7830844880290251777
+      DeepForestTileset_45: -1343189043977761233
+      DeepForestTileset_7: -8716999923461139079
+      DeepForestTileset_52: 3169662330012143677
+      DeepForestTileset_65: -9103533562987484565
+      DeepForestTileset_55: 3254503957817471622
+      DeepForestTileset_48: 7277308702399520360
+      DeepForestTileset_17: -2565454211510090407
+      DeepForestTileset_21: -3053862261953095014
+      DeepForestTileset_49: -3123361094381270746
+      DeepForestTileset_5: 696713593753103347
+      DeepForestTileset_29: 5039744243474833556
+      DeepForestTileset_34: 2530735199246506147
+      DeepForestTileset_71: -8855233146869365821
+      DeepForestTileset_46: 880926736062275218
+      DeepForestTileset_62: -8789336695253741699
+      DeepForestTileset_19: -8078527344404111884
+      DeepForestTileset_58: -8138634426313888409
+      DeepForestTileset_3: -2210956514643180507
+      DeepForestTileset_23: 2818326930378124203
+      DeepForestTileset_54: 1726853180178197102
+      DeepForestTileset_60: -68241500964879999
+      DeepForestTileset_36: 6971767487365886674
+      DeepForestTileset_22: -2005125069745412229
+      DeepForestTileset_32: -7154432289304355992
+      DeepForestTileset_59: -6019829150418040812
+      DeepForestTileset_67: -4707972339321669229
+      DeepForestTileset_69: -2949802654091003160
+      DeepForestTileset_18: -1518546959335660300
+      DeepForestTileset_44: 7839595584187765883
+      DeepForestTileset_41: 1008210383482826705
+      DeepForestTileset_39: 2291796949509447223
+      DeepForestTileset_42: 2018479428258368133
+      DeepForestTileset_56: 1204296667229671607
+      DeepForestTileset_64: -1995177322071886852
+      DeepForestTileset_11: 4529014305523819379
+      DeepForestTileset_2: 8844080389492024717
+      DeepForestTileset_68: -347206390967790267
+      DeepForestTileset_35: 8458569421288436876
+      DeepForestTileset_1: -3610612366989451905
+      DeepForestTileset_38: 4389462872709438956
+      DeepForestTileset_10: 1981780457716939509
+      DeepForestTileset_43: -3363935375663257776
+      DeepForestTileset_50: -3919556643786043251
+      DeepForestTileset_61: 2310335365435058526
+      DeepForestTileset_8: -2130863182874274337
+      DeepForestTileset_51: -8350386876039609877
+      DeepForestTileset_15: -6731982958672961214
+      DeepForestTileset_13: 8715263738126728051
+      DeepForestTileset_63: -616686850987549647
+      DeepForestTileset_74: -5451929053657078305
+      DeepForestTileset_9: -6390167864422606397
+      DeepForestTileset_57: -6600965308233619165
+      DeepForestTileset_66: -5356422334853419350
+      DeepForestTileset_72: -6305432869899981178
+      DeepForestTileset_24: 5615881528094242875
+      DeepForestTileset_16: 60192529088121207
+      DeepForestTileset_20: -8465568431868405375
+      DeepForestTileset_28: 5864259574230343243
+      DeepForestTileset_30: 1376267776369549034
+      DeepForestTileset_6: -1188572470427998071
+      DeepForestTileset_70: -487895049698950954
+      DeepForestTileset_40: 4018138288562501371
+      DeepForestTileset_26: -7648355856037371145
+      DeepForestTileset_33: -5289909551092109454
+      DeepForestTileset_73: 1263875117467389796
+      DeepForestTileset_25: -7019644535619980759
+      DeepForestTileset_37: -4059308499897772799
+      DeepForestTileset_12: -4618233675542423606
+      DeepForestTileset_47: 1633736265546764926
+      DeepForestTileset_14: -984440705410796741
+      DeepForestTileset_27: -6789294509183990706
+      DeepForestTileset_4: 2204136564432003527
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

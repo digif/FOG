@@ -249,6 +249,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1924,6 +1925,82 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DeepForestTileset - full rect_13: 6898965011033024664
+      DeepForestTileset - full rect_16: 2308396126237738107
+      DeepForestTileset - full rect_6: 4293075517016340210
+      DeepForestTileset - full rect_66: 102945580902953606
+      DeepForestTileset - full rect_35: -165509260158978407
+      DeepForestTileset - full rect_51: -7063940779256558155
+      DeepForestTileset - full rect_55: 1352512936004989936
+      DeepForestTileset - full rect_40: -6587840941988637233
+      DeepForestTileset - full rect_14: -3702926056181077005
+      DeepForestTileset - full rect_7: 8713199606810163927
+      DeepForestTileset - full rect_10: -8241726580797026461
+      DeepForestTileset - full rect_28: 3986041120026755295
+      DeepForestTileset - full rect_64: -2323015098988161603
+      DeepForestTileset - full rect_21: -4955967793110422247
+      DeepForestTileset - full rect_39: 6921570103880411942
+      DeepForestTileset - full rect_67: -1954216774974744169
+      DeepForestTileset - full rect_29: -5240174038576722269
+      DeepForestTileset - full rect_27: 235759896735568041
+      DeepForestTileset - full rect_25: -3298312908005800806
+      DeepForestTileset - full rect_49: 1483530271985887703
+      DeepForestTileset - full rect_73: 2725338284494135419
+      DeepForestTileset - full rect_65: -3364277259812742579
+      DeepForestTileset - full rect_70: 3039147735678746170
+      DeepForestTileset - full rect_53: -7806705634356774563
+      DeepForestTileset - full rect_9: -4511691009774085727
+      DeepForestTileset - full rect_50: -6058611395560876310
+      DeepForestTileset - full rect_3: -194867764579934158
+      DeepForestTileset - full rect_24: 1302420535723452873
+      DeepForestTileset - full rect_18: 6366225450324280985
+      DeepForestTileset - full rect_46: 4923862449184808817
+      DeepForestTileset - full rect_22: -7746182525877393166
+      DeepForestTileset - full rect_4: 4254788986798063735
+      DeepForestTileset - full rect_11: 3430079980562863656
+      DeepForestTileset - full rect_19: -3364099132617809281
+      DeepForestTileset - full rect_47: -7178694756817342238
+      DeepForestTileset - full rect_60: -4398665734348987077
+      DeepForestTileset - full rect_56: 7239844166010878078
+      DeepForestTileset - full rect_15: -3868773830002631491
+      DeepForestTileset - full rect_45: -6802400748528153703
+      DeepForestTileset - full rect_26: -1405902956380829642
+      DeepForestTileset - full rect_69: -5034511588370001571
+      DeepForestTileset - full rect_42: -2747181024739565682
+      DeepForestTileset - full rect_0: 6282467712741418138
+      DeepForestTileset - full rect_31: 4086724420853007663
+      DeepForestTileset - full rect_62: -256470571134847331
+      DeepForestTileset - full rect_36: -5916186953855807268
+      DeepForestTileset - full rect_54: 3009606394848293892
+      DeepForestTileset - full rect_34: -3390647236613314511
+      DeepForestTileset - full rect_43: -7672868661102277639
+      DeepForestTileset - full rect_61: -3743791494862422140
+      DeepForestTileset - full rect_74: 6370367860597173665
+      DeepForestTileset - full rect_30: 1378853395865046236
+      DeepForestTileset - full rect_12: -8758063911677742646
+      DeepForestTileset - full rect_58: -9070025227850309206
+      DeepForestTileset - full rect_41: 974057109499185604
+      DeepForestTileset - full rect_33: 2658619732874358447
+      DeepForestTileset - full rect_72: -2630131004372708415
+      DeepForestTileset - full rect_71: 4997377563926182520
+      DeepForestTileset - full rect_52: 3288537829322840668
+      DeepForestTileset - full rect_48: -1989775719783658668
+      DeepForestTileset - full rect_20: 1793018906418668975
+      DeepForestTileset - full rect_2: 255979908155437014
+      DeepForestTileset - full rect_8: -6726530879515698561
+      DeepForestTileset - full rect_68: -1339746619564740029
+      DeepForestTileset - full rect_57: 8468858828905428147
+      DeepForestTileset - full rect_17: -433713183497114083
+      DeepForestTileset - full rect_59: 4207082028419445780
+      DeepForestTileset - full rect_32: 7913131269274596747
+      DeepForestTileset - full rect_38: 4072587302310523706
+      DeepForestTileset - full rect_5: -131063534842617933
+      DeepForestTileset - full rect_37: -3683638986775034125
+      DeepForestTileset - full rect_1: -8526609670385672293
+      DeepForestTileset - full rect_23: -4077748219857812907
+      DeepForestTileset - full rect_44: 6475203009328114602
+      DeepForestTileset - full rect_63: 8794270109532724791
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
