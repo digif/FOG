@@ -38,7 +38,6 @@ public class FallPower : IPower
     public override void UseStart(PowerManager powerManager)
     {
         isUsingPower = true;
-        ui.ui.SetActive(true);
         var emission = ui.particlesPower.emission;
         emission.enabled = true;
         
@@ -50,8 +49,10 @@ public class FallPower : IPower
 
     public override void UseStop(PowerManager powerManager)
     {
-        //TODO Allow player to move
-        //TODO Hide Ui
+        ui.collider.SetActive(false);
+        isUsingPower = false;
+        var emission = ui.particlesPower.emission;
+        emission.enabled = false;
         
         ui.collider.SetActive(false);
     }
