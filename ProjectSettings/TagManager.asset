@@ -17,7 +17,7 @@ TagManager:
   - Enemies
   - KeyFrag
   - Triggers
-  - 
+  - Particle
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Particule
+    uniqueID: 2429482441
     locked: 0
