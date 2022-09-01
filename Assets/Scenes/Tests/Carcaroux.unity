@@ -4251,7 +4251,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -6471,7 +6471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255916585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000035762787, y: 0.00000023841858, z: -800}
+  m_LocalPosition: {x: -0.0000004172325, y: 0.00000023841858, z: -800}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10435,7 +10435,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -11387,19 +11387,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
-      value: -0.36919355
+      value: -0.36918783
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Center.y
-      value: -0.09033418
+      value: -0.09033537
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Extent.x
-      value: 2.4562159
+      value: 2.456214
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Extent.y
-      value: 2.3822193
+      value: 2.3822203
       objectReference: {fileID: 0}
     - target: {fileID: 6961495763352243106, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_RootOrder
@@ -11455,59 +11455,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: -2.8254094
+      value: -2.8254018
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
-      value: -0.70738405
+      value: -0.70738256
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 1.350082
+      value: 1.3501114
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 2.0870225
+      value: 2.087026
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -2.0995426
+      value: -2.0995626
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: -0.83268255
+      value: -0.83269894
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
-      value: -2.4725535
+      value: -2.4725556
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
-      value: -1.0449224
+      value: -1.0449204
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
-      value: -0.35132134
+      value: -0.35132095
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
-      value: -0.4634999
+      value: -0.46350002
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
-      value: -1.6131094
+      value: -1.6131103
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
-      value: -0.46494764
+      value: -0.46494782
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
-      value: -2.8254094
+      value: -2.8254018
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
-      value: -0.70738405
+      value: -0.70738256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
@@ -15712,7 +15712,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -21280,7 +21280,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -26245,7 +26245,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -31336,7 +31336,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -32335,7 +32335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694837729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000035762787, y: 0.00000023841858, z: -800}
+  m_LocalPosition: {x: -0.0000004172325, y: 0.00000023841858, z: -800}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1263849446}
@@ -32371,19 +32371,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
-      value: -0.5666933
+      value: -0.5666678
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Center.y
-      value: -0.48761773
+      value: -0.48761082
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Extent.x
-      value: 2.6537156
+      value: 2.6536937
       objectReference: {fileID: 0}
     - target: {fileID: 6276273291979726054, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_LocalAABB.m_Extent.y
-      value: 2.779492
+      value: 2.779485
       objectReference: {fileID: 0}
     - target: {fileID: 6961495763352243106, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_RootOrder
@@ -32447,7 +32447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
-      value: -0.39501435
+      value: -0.39501473
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
@@ -32455,23 +32455,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: 2.2918746
+      value: 2.291874
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 1.350082
+      value: 1.3501114
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 2.0870225
+      value: 2.087026
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -2.0995426
+      value: -2.0995626
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: -0.32292104
+      value: -0.32292116
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
@@ -32479,19 +32479,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
-      value: -1.7625153
+      value: -1.7625631
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
-      value: -2.837871
+      value: -2.8378851
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x
-      value: -3.220409
+      value: -3.2203615
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
-      value: -3.2671096
+      value: -3.2670958
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
@@ -32499,7 +32499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
-      value: -0.39501435
+      value: -0.39501473
       objectReference: {fileID: 0}
     - target: {fileID: 8364184245471700971, guid: cf260bce599b9864baf261e0f965fae9, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
@@ -38752,7 +38752,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -71811,7 +71811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8736017233881205984, guid: d0b869bdbb3438348985e74f9bf662b7, type: 3}
       propertyPath: m_Points.Array.data[55].y
-      value: -0.16654985
+      value: -0.16654982
       objectReference: {fileID: 0}
     - target: {fileID: 8736017233881205984, guid: d0b869bdbb3438348985e74f9bf662b7, type: 3}
       propertyPath: m_Points.Array.data[56].x
@@ -76739,7 +76739,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -84132,7 +84132,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -89097,7 +89097,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -97160,7 +97160,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -102125,7 +102125,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -106988,7 +106988,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -111974,7 +111974,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -113184,6 +113184,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &1853667583 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 773544773383838268, guid: abf17922d84107d4982fed86704befd1, type: 3}
+  m_PrefabInstance: {fileID: 1853667576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1875063156
 GameObject:
   m_ObjectHideFlags: 0
@@ -117227,7 +117232,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -122124,7 +122129,7 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 0.53
     primitives:
-    - {fileID: 0}
+    - {fileID: 1853667583}
   SubModule:
     serializedVersion: 2
     enabled: 0
