@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SlopeHandler : MonoBehaviour
 {
-    #region FIelds
+    #region Fields
     
     [SerializeField] private Vector2Variable moveDirection = null;
     [SerializeField] private BoolVariable isAboveGround = null;
