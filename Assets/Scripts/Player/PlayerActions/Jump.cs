@@ -77,7 +77,6 @@ public class Jump : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        // jump if on the ground and button pressed
         if (!isGrounded.Value || !context.started) return;
 
         _rigidbody.velocity = myTransform.up * jumpPower.Value;
