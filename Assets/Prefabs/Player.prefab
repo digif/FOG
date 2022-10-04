@@ -19757,13 +19757,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerRigidbody: {fileID: 4096670387040409226}
   PlayerTransform: {fileID: 7994347526917939338}
-  IsFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
+  IsFacingRight: {fileID: 11400000, guid: cbfba4a882091d44691b25f336cd7b88, type: 2}
+  isGrounded: {fileID: 11400000, guid: eae908a3d0930f84f8a4ad763d74c4a2, type: 2}
   winterPowerUi: {fileID: 6932166381407858231}
   fallPowerUi: {fileID: 5308789236822753121}
-  canRun: {fileID: 11400000, guid: e86e3c02c54d6784a8a50a78e33a05be, type: 2}
-  moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
-  onPowerEvent: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
+  canRun: {fileID: 11400000, guid: 9f625fb409da7294bacdc533ff3d0354, type: 2}
+  moveDirection: {fileID: 11400000, guid: b5a7e621ef878154aad4a81294a73ead, type: 2}
+  onPowerEvent: {fileID: 11400000, guid: 036a27fb3cd76904c8d228530e6c9c11, type: 2}
 --- !u!1 &7994347526125581988
 GameObject:
   m_ObjectHideFlags: 0
@@ -19795,7 +19795,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7994347526917939338}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7994347526125581991
 AudioSource:
@@ -19896,9 +19896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178ad6560356a7c4a8842a6ee820ccf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
-  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
+  isSliding: {fileID: 11400000, guid: 9343d58e976395e4da7c2cf69cbd4f4b, type: 2}
+  isGrounded: {fileID: 11400000, guid: eae908a3d0930f84f8a4ad763d74c4a2, type: 2}
+  isMoving: {fileID: 11400000, guid: 98a0705cc9ebe274a9ec1b964d2a38ed, type: 2}
   playerRigidbody: {fileID: 4096670387040409226}
 --- !u!114 &4663727225450131615
 MonoBehaviour:
@@ -19912,7 +19912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05506f9a5e72024093a6920215731f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerEventSo: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
+  powerEventSo: {fileID: 11400000, guid: 036a27fb3cd76904c8d228530e6c9c11, type: 2}
   listeners:
     m_PersistentCalls:
       m_Calls:
@@ -20045,10 +20045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e79f8910f9d9d41be5b537c1420a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
-  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
+  isSliding: {fileID: 11400000, guid: 9343d58e976395e4da7c2cf69cbd4f4b, type: 2}
+  isGrounded: {fileID: 11400000, guid: eae908a3d0930f84f8a4ad763d74c4a2, type: 2}
+  isFacingRight: {fileID: 11400000, guid: cbfba4a882091d44691b25f336cd7b88, type: 2}
+  isMoving: {fileID: 11400000, guid: 98a0705cc9ebe274a9ec1b964d2a38ed, type: 2}
   playerSprite: {fileID: 7994347526497175215}
   playerRigidbody: {fileID: 4096670387040409226}
 --- !u!114 &6936604205904484535
@@ -20063,7 +20063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e7b551f34f7944b8a99084419a8ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsVoidEventSo: {fileID: 11400000, guid: e4be2f2d427f75b40b649aba1dd3f439, type: 2}
+  fsVoidEventSo: {fileID: 11400000, guid: 4ba6ec1e84da43a468819cf2c91326b9, type: 2}
   listeners:
     m_PersistentCalls:
       m_Calls:
@@ -20091,7 +20091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05506f9a5e72024093a6920215731f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerEventSo: {fileID: 11400000, guid: a7b244ff8aacfab4fa36ce0aa7f25798, type: 2}
+  powerEventSo: {fileID: 11400000, guid: 036a27fb3cd76904c8d228530e6c9c11, type: 2}
   listeners:
     m_PersistentCalls:
       m_Calls:
@@ -20124,7 +20124,6 @@ GameObject:
   - component: {fileID: 4815434208830631348}
   - component: {fileID: 3916791590187430659}
   - component: {fileID: 2282140862325525879}
-  - component: {fileID: 5764800570936860962}
   - component: {fileID: 6106344296615277521}
   - component: {fileID: 4950848516571183051}
   m_Layer: 7
@@ -20146,8 +20145,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7994347526497175213}
-  - {fileID: 7994347527435982373}
   - {fileID: 7994347526125581989}
+  - {fileID: 7994347527435982373}
   - {fileID: 793425710515369669}
   - {fileID: 4422695859878589116}
   m_Father: {fileID: 0}
@@ -20218,15 +20217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11751599546f3c14186c8a7b8d5678c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
-  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
-  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isMoving: {fileID: 11400000, guid: b88d31f9e74bfd7469cc690d1bc59ff1, type: 2}
-  isAgainstWall: {fileID: 11400000, guid: 1fd15ffa824fea74a8958cd8d5c996c2, type: 2}
-  isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  canRun: {fileID: 11400000, guid: e86e3c02c54d6784a8a50a78e33a05be, type: 2}
-  onLevelStarted: {fileID: 11400000, guid: bb7dac2cc2bc3bb41b4e911dc1962400, type: 2}
-  playerSpeed: {fileID: 11400000, guid: 1d16017f02c58c344b1f12424258cd59, type: 2}
+  moveDirection: {fileID: 11400000, guid: b5a7e621ef878154aad4a81294a73ead, type: 2}
+  isDead: {fileID: 11400000, guid: 09fe837d5a3fbe6429f2d34689012c9d, type: 2}
+  isGrounded: {fileID: 11400000, guid: eae908a3d0930f84f8a4ad763d74c4a2, type: 2}
+  isMoving: {fileID: 11400000, guid: 98a0705cc9ebe274a9ec1b964d2a38ed, type: 2}
+  isAgainstWall: {fileID: 11400000, guid: 8a2e417b29e4e574a9ef0cddf2cf9e63, type: 2}
+  isFacingRight: {fileID: 11400000, guid: cbfba4a882091d44691b25f336cd7b88, type: 2}
+  canRun: {fileID: 11400000, guid: 9f625fb409da7294bacdc533ff3d0354, type: 2}
+  playerSpeed: {fileID: 11400000, guid: b5a7e621ef878154aad4a81294a73ead, type: 2}
 --- !u!114 &1101761346379749589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20239,11 +20237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad9656c408d8c547b8de015cdc54b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: {fileID: 11400000, guid: bf66ebeae02c0c148981cd1805a22ff6, type: 2}
-  topFallSpeed: {fileID: 11400000, guid: 253892e18be3dae41817a3406e491ac5, type: 2}
-  OnJump: {fileID: 11400000, guid: 2536db0da0a831c43b89e170c9082c87, type: 2}
-  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isAgainstWall: {fileID: 11400000, guid: 1fd15ffa824fea74a8958cd8d5c996c2, type: 2}
+  jumpPower: {fileID: 11400000, guid: 15b04c41a3693fe4192c9f9a867bacf6, type: 2}
+  topFallSpeed: {fileID: 11400000, guid: de3121b2d04699f4e8e6f7438edc88c1, type: 2}
+  onJump: {fileID: 11400000, guid: 8041537cceb7c3042aedde0c76755c2d, type: 2}
+  isGrounded: {fileID: 11400000, guid: eae908a3d0930f84f8a4ad763d74c4a2, type: 2}
+  isAgainstWall: {fileID: 11400000, guid: 8a2e417b29e4e574a9ef0cddf2cf9e63, type: 2}
 --- !u!114 &4815434208830631348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20256,8 +20254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954c24d301096de44ace63674a32565c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {fileID: 11400000, guid: 779e3a32a7730c64e9c9547f6c29ee79, type: 2}
-  isAboveGround: {fileID: 11400000, guid: 827610960eb91e74a8013a7ec53e96c0, type: 2}
+  moveDirection: {fileID: 11400000, guid: b5a7e621ef878154aad4a81294a73ead, type: 2}
+  isAboveGround: {fileID: 11400000, guid: 5584722997919a249ac35a7e2ef88563, type: 2}
 --- !u!114 &3916791590187430659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20270,8 +20268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773c41fcd5e644a46a0ae0b9cda3195d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: {fileID: 11400000, guid: 30d0c7059900e16489a23ea581706632, type: 2}
-  isSliding: {fileID: 11400000, guid: 4b3fd48321aa200499ecff27f4d7ebee, type: 2}
+  isPaused: {fileID: 11400000, guid: 1ceaeb5ebcb5b684d8d33703a0ee82cb, type: 2}
+  isSliding: {fileID: 11400000, guid: 9343d58e976395e4da7c2cf69cbd4f4b, type: 2}
   standingCollider: {fileID: 3591418821468190334}
   slidingCollider: {fileID: 665677097667644206}
   playerMaterial: {fileID: 6200000, guid: 0dce8d94bb719094fabaa080a38440b3, type: 2}
@@ -20287,28 +20285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e702d190fce2464488a269f921ae46c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: {fileID: 11400000, guid: 16662c3700879d14e9dd34a781a4b7bd, type: 2}
-  isAgainstWall: {fileID: 11400000, guid: 1fd15ffa824fea74a8958cd8d5c996c2, type: 2}
-  jumpPower: {fileID: 11400000, guid: bf66ebeae02c0c148981cd1805a22ff6, type: 2}
-  isAboveGround: {fileID: 11400000, guid: 827610960eb91e74a8013a7ec53e96c0, type: 2}
-  isFacingRight: {fileID: 11400000, guid: 057920860e3a12749bddce86dc8e383b, type: 2}
-  OnJump: {fileID: 11400000, guid: 2536db0da0a831c43b89e170c9082c87, type: 2}
---- !u!114 &5764800570936860962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994347526917939336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a551a635d67b54ba7b9326aa1916dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
-  onPause: {fileID: 11400000, guid: da6b4075888f5774eb6c801f6fd0ed2b, type: 2}
-  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
-  isPaused: {fileID: 11400000, guid: 30d0c7059900e16489a23ea581706632, type: 2}
+  isGrounded: {fileID: 11400000, guid: eae908a3d0930f84f8a4ad763d74c4a2, type: 2}
+  isAgainstWall: {fileID: 11400000, guid: 8a2e417b29e4e574a9ef0cddf2cf9e63, type: 2}
+  jumpPower: {fileID: 11400000, guid: 15b04c41a3693fe4192c9f9a867bacf6, type: 2}
+  isAboveGround: {fileID: 11400000, guid: 5584722997919a249ac35a7e2ef88563, type: 2}
+  isFacingRight: {fileID: 11400000, guid: cbfba4a882091d44691b25f336cd7b88, type: 2}
+  onJump: {fileID: 11400000, guid: 8041537cceb7c3042aedde0c76755c2d, type: 2}
 --- !u!114 &6106344296615277521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20321,7 +20303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f845665330ceb43a1b9d77ff073ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onReset: {fileID: 11400000, guid: 472b2a63613822a4c871c6273aab50df, type: 2}
   playerPosition: {fileID: 7994347526917939338}
   currentRespawnPoint: {fileID: 11400000, guid: 40bcc73aa06d23c41af237455bcbc5a3, type: 2}
   onUnpause: {fileID: 11400000, guid: 2ba06b4a006e51e46ac25a06755d16fe, type: 2}
@@ -20338,9 +20319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0db16036e916174bb8dadefe429be5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
+  onDeath: {fileID: 11400000, guid: 4ba6ec1e84da43a468819cf2c91326b9, type: 2}
   onReset: {fileID: 11400000, guid: 472b2a63613822a4c871c6273aab50df, type: 2}
-  isDead: {fileID: 11400000, guid: 90ef9658a5c354942b6a3906beaf50a2, type: 2}
+  isDead: {fileID: 11400000, guid: 09fe837d5a3fbe6429f2d34689012c9d, type: 2}
 --- !u!1 &7994347527435982372
 GameObject:
   m_ObjectHideFlags: 0
@@ -20370,7 +20351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7994347526917939338}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7994347527435982374
 MonoBehaviour:
