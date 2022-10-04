@@ -29,6 +29,7 @@ public class Run : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        moveDirection.OnValueChange += tmp;
     }
 
     private void FixedUpdate()
@@ -46,15 +47,17 @@ public class Run : MonoBehaviour
         isFacingRight.Value = inputValue > 0;
         isMoving.Value = true;
         
-        print(isFacingRight.Value);
         print(moveDirection.Value);
-        print(-inputValue);
-        print(moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : 1f)));
         
         _rigidbody.position += moveDirection.Value * (-inputValue * Time.deltaTime * 10f * (isGrounded.Value ? 1f : 1f));
         
     }
 
+    private void tmp()
+    {
+        print("here" + moveDirection.Value);
+    }
+    
     #endregion
 
     #region Inputs

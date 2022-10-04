@@ -20284,7 +20284,7 @@ MonoBehaviour:
   isAgainstWall: {fileID: 11400000, guid: 8a2e417b29e4e574a9ef0cddf2cf9e63, type: 2}
   isFacingRight: {fileID: 11400000, guid: cbfba4a882091d44691b25f336cd7b88, type: 2}
   canRun: {fileID: 11400000, guid: 9f625fb409da7294bacdc533ff3d0354, type: 2}
-  playerSpeed: {fileID: 11400000, guid: b5a7e621ef878154aad4a81294a73ead, type: 2}
+  playerSpeed: {fileID: 11400000, guid: 8f23ea79b1d937145b57de2b01a5b2b1, type: 2}
 --- !u!114 &1101761346379749589
 MonoBehaviour:
   m_ObjectHideFlags: 0

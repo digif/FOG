@@ -28,6 +28,8 @@ public class SlopeHandler : MonoBehaviour
             //TODO limit max slope
             isAboveGround.Value = true;
             moveDirection.Value = Vector2.Perpendicular(hit.normal).normalized;
+            print(Vector2.Perpendicular(hit.normal).normalized);
+            print(moveDirection.Value);
         }
         else
         {
