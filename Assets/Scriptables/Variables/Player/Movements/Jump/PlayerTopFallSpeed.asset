@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c64c09c4c0772a40a2e7f9bf8b8456e, type: 3}
   m_Name: PlayerTopFallSpeed
   m_EditorClassIdentifier: 
-  _value: 0
+  _value: 50
