@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: -5185160854702639759}
   - component: {fileID: -7177301348729301311}
   - component: {fileID: 8736017233881205984}
-  - component: {fileID: 7494616109358699634}
+  - component: {fileID: 4756762539027402023}
+  - component: {fileID: 1761744708166604273}
   m_Layer: 8
   m_Name: Racine
   m_TagString: Untagged
@@ -202,7 +203,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &7494616109358699634
+--- !u!114 &4756762539027402023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,4 +215,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376c780f9a647e944b3000d8c6ed5aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDeath: {fileID: 11400000, guid: c7cc970db03a99346a16b1f37b0550d2, type: 2}
+  interact: {fileID: 0}
+  tagToTriggerWith:
+  - Player
+--- !u!114 &1761744708166604273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781233123474239385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d30e6bd41170e47a1b410f3d22c6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 4756762539027402023}
+  tagToTriggerWith:
+  - Player

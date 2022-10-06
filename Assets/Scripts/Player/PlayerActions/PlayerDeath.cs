@@ -1,20 +1,38 @@
+using System;
+using System.Collections;
+using Save;
 using UnityEngine;
 
 namespace Systems.Player_managers
 {
     public class PlayerDeath : MonoBehaviour
     {
-        private Vector2 spawnPoint;
+        public ISaver[] saversToLoadOnDeath;
+        [SerializeField] private GameObject graphics;
+        
 
-        private void Start()
+        [SerializeField] private float respawnTime = .5f;
+        private WaitForSeconds timeToWait;
+
+        private void Awake()
         {
-            spawnPoint = transform.position;
+            timeToWait = new WaitForSeconds(respawnTime);
         }
 
-        public void OnCollisionEnter2D(Collision2D col){
-            if(col.gameObject.CompareTag("Enemy")){
-                transform.position = spawnPoint;
+        private IEnumerator Dead()
+        {
+            graphics.SetActive(false);
+            
+            yield return timeToWait;
+            
+            foreach (var saver in saversToLoadOnDeath)
+            {
+                if (!saver.loadOnDeath) continue;
+                
+                saver.Load();
             }
+
+            graphics.SetActive(true); 
         }
     }
 }

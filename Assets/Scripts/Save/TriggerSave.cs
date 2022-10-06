@@ -1,19 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using Save;
 using UnityEngine;
+using Utils;
 
-public class TriggerSave : MonoBehaviour
+namespace Save
 {
-    public string[] tagToTriggerWith;
-    
-    private void OnTriggerEnter2D(Collider2D other)
+    [RequireComponent(typeof(Collider2D))]
+    public class TriggerSave : MonoBehaviour
     {
-        for (var i = 0; i < tagToTriggerWith.Length; i++)
+        public string[] tagToTriggerWith;
+    
+        private void Awake()
         {
-            if (!other.CompareTag("Player")) continue;
-
-            other.GetComponent<ISaver>().Save();
+            GetComponent<Collider2D>().isTrigger = true;
+        }
+        
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (CheckTags.CompareTagList(other.gameObject, tagToTriggerWith))
+                other.GetComponent<ISaver>().Save();
         }
     }
 }

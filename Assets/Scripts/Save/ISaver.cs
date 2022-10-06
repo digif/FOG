@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Save
@@ -6,7 +5,8 @@ namespace Save
     public abstract class ISaver : MonoBehaviour
     {
         [SerializeField] protected string specificName;
-        [SerializeField] protected bool loadAtStart = true;
+        public bool loadAtStart = true;
+        public bool loadOnDeath = true;
 
         protected void Start()
         {

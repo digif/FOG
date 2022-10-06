@@ -20183,8 +20183,8 @@ GameObject:
   - component: {fileID: 4815434208830631348}
   - component: {fileID: 3916791590187430659}
   - component: {fileID: 2282140862325525879}
-  - component: {fileID: 4950848516571183051}
-  - component: {fileID: 5084842860323162577}
+  - component: {fileID: 81197925529053750}
+  - component: {fileID: 3615748767602641669}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -20351,35 +20351,37 @@ MonoBehaviour:
   isAboveGround: {fileID: 11400000, guid: 5584722997919a249ac35a7e2ef88563, type: 2}
   isFacingRight: {fileID: 11400000, guid: cbfba4a882091d44691b25f336cd7b88, type: 2}
   onJump: {fileID: 11400000, guid: 8041537cceb7c3042aedde0c76755c2d, type: 2}
---- !u!114 &4950848516571183051
+--- !u!114 &81197925529053750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7994347526917939336}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0db16036e916174bb8dadefe429be5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDeath: {fileID: 11400000, guid: 4ba6ec1e84da43a468819cf2c91326b9, type: 2}
-  onReset: {fileID: 11400000, guid: 472b2a63613822a4c871c6273aab50df, type: 2}
-  isDead: {fileID: 11400000, guid: 09fe837d5a3fbe6429f2d34689012c9d, type: 2}
---- !u!114 &5084842860323162577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994347526917939336}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3991b9a0744c1c544b0c4e7e194b47e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   specificName: 
   loadAtStart: 1
+  loadOnDeath: 1
+--- !u!114 &3615748767602641669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994347526917939336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e3ef56c7dc91948af3c9edd6095a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saversToLoadOnDeath:
+  - {fileID: 81197925529053750}
+  graphics: {fileID: 7994347526497175212}
+  respawnTime: 0.5
 --- !u!1 &7994347527435982372
 GameObject:
   m_ObjectHideFlags: 0
