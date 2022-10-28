@@ -168,7 +168,7 @@ MonoBehaviour:
   Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637866956079343645
+  lastModified: 637873486049891607
   FileSizes:
   - Name: Desktop
     Value: 1138
@@ -200,7 +200,7 @@ MonoBehaviour:
   - {fileID: 5358419289928090647}
   StringsBanks:
   - {fileID: -1379430355973238936}
-  cacheTime: 637866956079343645
+  cacheTime: 637873486049891607
   cacheVersion: 10
 --- !u!114 &2267315541417271380
 MonoBehaviour:
@@ -271,7 +271,7 @@ MonoBehaviour:
   Path: Fog platformer-20220327T204751Z-001/Fog platformer/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637866956079303754
+  lastModified: 637873486049881598
   FileSizes:
   - Name: Desktop
     Value: 7024256
